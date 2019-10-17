@@ -1,0 +1,38 @@
+const RequestBase = require('./index');
+const { PrepareResponse } = require('../response');
+
+interface PostData {
+  merchant_uid: string,
+  amount: number,
+};
+interface getParams {
+  merchant_uid: string,
+};
+
+/* 결제 예정 금액 등록 및 조회 */
+class Prepare extends RequestBase {
+  constructor() {
+    super();
+
+    this.responseClass = new PrepareResponse();
+  }
+
+  /* 결제 예정 금액 등록 */
+  public static post(data: PostData): Prepare {
+    const prepare = new Prepare();
+    prepare.url = '/payments/prepare';
+    prepare.method = 'POST';
+    prepare.data = data;
+    return prepare;
+  }
+
+  /* 결제 예정 금액 조회 */
+  public static get({ merchant_uid }: getParams): Prepare {
+    const prepare = new Prepare();
+    prepare.url = `/payments/prepare/${merchant_uid}`;
+    return prepare;
+  }
+}
+
+export {};
+module.exports = Prepare;

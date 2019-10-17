@@ -1,0 +1,6 @@
+node_modules/
+/dist
+/test
+tsconfig.json
+tslint.json
+jestconfig.json

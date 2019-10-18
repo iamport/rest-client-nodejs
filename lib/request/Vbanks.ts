@@ -1,14 +1,16 @@
 const RequestBase = require('./index');
 const { PaymentResponse, VbankHolderResponse } = require('../response');
-const { VbankCode, BankCode } = require('../enum');
+const { SettleVbankCode, BankCode } = require('../enum');
 
-const vbankCodeType = VbankCode.getType();
+import { ImpUidParams } from '../../';
+
+const settleVbankCodeType = SettleVbankCode.getType();
 const BankCodeType = BankCode.getType();
 
 interface PostData {
   merchant_uid: string,
   amount: number,
-  vbank_code: typeof vbankCodeType,
+  vbank_code: typeof settleVbankCodeType,
   vbank_due: number,
   vbank_holder: string,
   name?: string,
@@ -20,9 +22,6 @@ interface PostData {
   pg?: string,
   notice_url?: Array<string>,
   custom_data?: string,
-};
-interface DeleteData {
-  imp_uid: string,
 };
 interface PutData {
   imp_uid: string,
@@ -52,7 +51,7 @@ class Vbanks extends RequestBase {
   }
 
   /* 가상계좌 삭제 */
-  public static delete({ imp_uid }: DeleteData): Vbanks {
+  public static delete({ imp_uid }: ImpUidParams): Vbanks {
     const vbanks = new Vbanks();
     vbanks.url = `/vbanks/${imp_uid}`;
     vbanks.method = 'DELETE';

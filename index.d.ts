@@ -4,19 +4,10 @@ export interface Headers {
   Authorization: string,
 }
 
-export interface Spec {
-  url: string,
-  method?: Method,        // default: GET
-  data?: object,
-  params?: object,
-  responseType?: string,  // default: Item
-  responseClass: any,
-}
-
 export interface Config {
   url: string,
   method: Method,
-  headers: Headers,
+  headers?: Headers,
   data: object,
   params: object,
 }
@@ -33,3 +24,10 @@ export interface IamportData {
   response?: any,
 }
 
+export interface ImpUidParams {
+  imp_uid: string,
+}
+
+export interface MerchantUidParams {
+  merchant_uid: string,
+}

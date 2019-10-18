@@ -18,7 +18,7 @@ class Prepare extends RequestBase {
   }
 
   /* 결제 예정 금액 등록 */
-  public static post(data: PostData): Prepare {
+  public static postAmount(data: PostData): Prepare {
     const prepare = new Prepare();
     prepare.url = '/payments/prepare';
     prepare.method = 'POST';
@@ -27,7 +27,7 @@ class Prepare extends RequestBase {
   }
 
   /* 결제 예정 금액 조회 */
-  public static get({ merchant_uid }: getParams): Prepare {
+  public static getAmount({ merchant_uid }: getParams): Prepare {
     const prepare = new Prepare();
     prepare.url = `/payments/prepare/${merchant_uid}`;
     return prepare;

@@ -2,7 +2,7 @@ const { Prepare } = require('../lib/request');
 
 module.exports = async (iamport) => {
   /* 결제 예정 금액 등록 */
-  const postAmount = Prepare.post({
+  const postAmount = Prepare.postAmount({
     merchant_uid: 'mid_1448280088556',
     amount: 1000,
   });
@@ -11,7 +11,7 @@ module.exports = async (iamport) => {
   .catch(error => console.log('error: ', error.response.data));
 
   /* 결제 예정 금액 조회 */
-  const getAmount = Prepare.get({
+  const getAmount = Prepare.getAmount({
     merchant_uid: 'mid_1448280088556',
   });
   await iamport.request(getAmount)

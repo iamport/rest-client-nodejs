@@ -3,6 +3,8 @@ const RequestBase = require('./index');
 const { PaymentResponse, PaymentAmountResponse } = require('../response');
 const { Status, Sorting } = require('../enum');
 
+import { ImpUidParams } from '../../';
+
 const StatusType = Status.getType();
 const SortingType = Sorting.getType();
 interface ImpUidsParams {
@@ -21,9 +23,6 @@ interface StatusParams {
   from: number,
   to: number,
   sorting: typeof SortingType,
-};
-interface ImpUidParams {
-  imp_uid: string,
 };
 interface MerchantUidParams {
   merchant_uid: string,
@@ -108,7 +107,7 @@ class Payments extends RequestBase {
   }
 
   /* 결제취소 */
-  public static postCancel(data: CancelData): Payments {
+  public static cancel(data: CancelData): Payments {
     const payments = new Payments();
     payments.url = '/payments/cancel';
     payments.method = 'POST';

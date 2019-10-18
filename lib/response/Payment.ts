@@ -1,5 +1,3 @@
-const _ = require('lodash');
-
 const ResponseBase = require('./index');
 
 interface PaymentCancelAnnotation {

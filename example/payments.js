@@ -75,7 +75,7 @@ module.exports = async (iamport) => {
   .catch(error => console.log('error: ', error.response.data));
 
   /* 결제취소 */
-  const paymentCancel = Payments.postCancel({
+  const paymentCancel = Payments.cancel({
     imp_uid: 'imp_448280090638',
     amount: 0,
     tax_free: 0,

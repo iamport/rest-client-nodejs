@@ -8,20 +8,36 @@ const iamport = new Iamport({
 });
 
 const TESTS = {
-  enum: require('./enum'),
-  escrows: require('./escrows'),
-  naverpay: require('./naverpay'),
+  authenticate: require('./authenticate'),
   payments: require('./payments'),
   prepare: require('./prepare'),
   vbanks: require('./vbanks'),
+  escrows: require('./escrows'),
+  receipts: require('./receipts'),
+  external: require('./external'),
+  kakao: require('./kakao'),
+  payco: require('./payco'),
+  naverco: require('./naverco'),
+  naverpay: require('./naverpay'),
+  subscribe: require('./subscribe'),
+  customers: require('./customers'),
+  certifications: require('./certifications'),
+  cards: require('./cards'),
+  banks: require('./banks'),
+  enum: require('./enum'),
 };
 
+const TARGETS = Object.keys(TESTS);
+const TARGETS_TO_STRING = TARGETS.join(', ');
 if (target) {
-  if (Object.keys(TESTS).indexOf(target) === -1) {
+  if (TARGETS.indexOf(target) === -1) {
     console.log('테스트 타깃이 올바르지 않습니다.');
+    console.log(`테스트 타깃 : ${TARGETS_TO_STRING}`);
   } else {
     TESTS[target](iamport);
   }
 } else {
-  console.log('테스트할 타깃을 입력해주세요. 예) yarn example payments');
+  console.log('테스트할 타깃을 입력해주세요.');
+  console.log(`테스트 타깃 : ${TARGETS_TO_STRING}`);
+  console.log('예) yarn example payments');
 }

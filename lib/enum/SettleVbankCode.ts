@@ -1,6 +1,6 @@
 import EnumBase from '.';
 
-class VbankCode extends EnumBase {
+class SettleVbankCode extends EnumBase {
   public IBK: string = '003';
   public KB: string = '004';
   public KEB: string = '005';
@@ -52,4 +52,4 @@ class VbankCode extends EnumBase {
   }
 }
 
-module.exports = new VbankCode();
+module.exports = new SettleVbankCode();

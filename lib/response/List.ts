@@ -1,8 +1,9 @@
+const _ = require('lodash');
 
 class List {
   public code: number;
   public message: string;
-  public response: Array<any>;
+  public response: any;
   
   constructor(data: List, responseClass: any) {
     const { code, message, response } = data;
@@ -10,7 +11,8 @@ class List {
     this.message = message;
     this.response = response.map((eachResponse: any) => {
       responseClass.setAttributes(eachResponse);
-      return responseClass.getAttributes();
+      const attributes = responseClass.getAttributes();
+      return _.assign({}, attributes);
     });
   }
 }

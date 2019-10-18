@@ -1,3 +1,4 @@
+const _ = require('lodash');
 
 class Collection {
   public code: number;
@@ -16,7 +17,8 @@ class Collection {
       next,
       list: list.map((eachList: any) => {
         responseClass.setAttributes(eachList);
-        return responseClass.getAttributes();
+        const attributes = responseClass.getAttributes();
+        return _.assign({}, attributes);
       }),
     };
   }

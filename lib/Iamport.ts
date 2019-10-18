@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const axios = require('axios');
 const qs = require('qs');
 
@@ -9,16 +10,20 @@ interface IamportProperties {
   apiKey: string,
   apiSecret: string,
 };
-
 interface RequestDataForGetToken {
   imp_key: string,
   imp_secret: string,
+};
+interface Token {
+  access_token: string,
+  now: number,
+  expired: number,
 };
 
 class Iamport {
   private apiKey: string;
   private apiSecret: string;
-  private token: string;
+  private token: Token;
   private apiInstance: any;
 
   constructor(properties: IamportProperties) {
@@ -33,24 +38,22 @@ class Iamport {
     });
   }
 
-  public async request(spec: any): Promise<any> {
-    const headers = await this.getHeaders();
-    const config = { ...spec, headers };
-
-    return this.apiInstance.request(config);
+  public getApiInstance(): any {
+    return this.apiInstance;
   }
 
-  private async getHeaders(): Promise<Headers> {
+  public async getHeaders(): Promise<Headers> {
     if (!this.isTokenValid()) {
       await this.getToken()
       .then(({ data }: any) => {
-        const { access_token } = data.response;
-        this.token = access_token;
+        const { response } = data;
+        this.token = _.assign({}, response);
       })
       .catch((error: any) => Promise.reject(error));
     } 
 
-    return { Authorization: `Bearer ${this.token}` };
+    const { access_token } = this.token;
+    return { Authorization: `Bearer ${access_token}` };
   }
 
   private getToken(): Promise<any> {
@@ -62,9 +65,9 @@ class Iamport {
   }
 
   private isTokenValid(): boolean {
-    // TODO: 함께 내려오는 now값과 비교해 유효성 여부 체크
-    if (this.token) {
-      return true;
+    if (this.token && this.token.access_token) {
+      const { now } = this.token;
+      return new Date().getTime() > now * 1000;
     }
     return false;
   }

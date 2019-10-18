@@ -1,9 +1,8 @@
 const _ = require('lodash');
-
 const { List, Item, Collection } = require('../response');
 
 import Iamport from '../Iamport';
-import { Method, Spec, AxiosResponse } from '../..';
+import { Method, Config, AxiosResponse } from '../..';
 
 class RequestBase {
   public url: string;
@@ -14,21 +13,24 @@ class RequestBase {
   public responseClass: any;
   public keepGoing: boolean = false; // 207에 대한 대응 여부
   public isLast: boolean = false; // collection 유형의 응답일때, next가 0인지 여부
+  public isTokenNeeded: boolean = true; // 토큰 필요 여부
 
   public async request(iamport: Iamport): Promise<AxiosResponse> {
-    const spec: Spec = {
+    const config: Config = {
       url: this.url,
       method: this.method,
       params: this.params,
       data: this.data,
-      responseClass: this.responseClass,
-      responseType: this.responseType,
     };
+    if (this.isTokenNeeded) {
+      config.headers = await iamport.getHeaders();
+    }
 
-    return iamport.request(spec)
+    return iamport.getApiInstance().request(config)
       .then(async (instanceResponse: any) => {
         const { data } = instanceResponse;
         const { code } = data;
+
         if (code === 0) {
           const response = await this.getResponse(instanceResponse);
           return Promise.resolve(response);
@@ -94,8 +96,19 @@ class RequestBase {
 
 export default RequestBase;
 module.exports = RequestBase;
+module.exports.Authenticate = require('./Authenticate');
 module.exports.Payments = require('./Payments');
 module.exports.NaverPay = require('./NaverPay');
+module.exports.NaverCo = require('./NaverCo');
 module.exports.Vbanks = require('./Vbanks');
 module.exports.Prepare = require('./Prepare');
 module.exports.Escrows = require('./Escrows');
+module.exports.Certifications = require('./Certifications');
+module.exports.Cards = require('./Cards');
+module.exports.Banks = require('./Banks');
+module.exports.Receipts = require('./Receipts');
+module.exports.External = require('./External');
+module.exports.Kakao = require('./Kakao');
+module.exports.Payco = require('./Payco');
+module.exports.Subscribe = require('./Subscribe');
+module.exports.Customers = require('./Customers');

@@ -32,7 +32,7 @@ class Escrows extends RequestBase {
   }
 
   /* 결제 예정 금액 등록 */
-  public static post(data: Data): Escrows {
+  public static postEscrow(data: Data): Escrows {
     const { imp_uid } = data;
     const prepare = new Escrows();
     prepare.url = `/escrows/logis/${imp_uid}`;
@@ -42,7 +42,7 @@ class Escrows extends RequestBase {
   }
 
   /* 결제 예정 금액 조회 */
-  public static put(data: Data): Escrows {
+  public static putEscrow(data: Data): Escrows {
     const { imp_uid } = data;
     const prepare = new Escrows();
     prepare.url = `/escrows/logis/${imp_uid}`;

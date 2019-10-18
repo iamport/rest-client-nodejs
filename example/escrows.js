@@ -21,24 +21,24 @@ const receiver = {
 
 module.exports = async (iamport) => {
   /* 배송정보 등록 */
-  const postEscrows = Escrows.post({
+  const postEscrow = Escrows.postEscrow({
     imp_uid: 'imp_448280090638',
     logis,
     sender,
     receiver,
   });
-  await postEscrows.request(iamport)
+  await postEscrow.request(iamport)
   .then(response => console.log('response: ', response.data))
   .catch(error => console.log('error: ', error.response.data));
 
   /* 배송정보 수정 */
-  const putEscrwos = Escrows.put({
+  const putEscrow = Escrows.putEscrow({
     imp_uid: 'imp_448280090638',
     logis,
     sender,
     receiver,
   });
-  await putEscrwos.request(iamport)
+  await putEscrow.request(iamport)
   .then(response => console.log('response: ', response.data))
   .catch(error => console.log('error: ', error.response.data));
 };

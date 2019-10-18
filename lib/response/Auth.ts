@@ -2,8 +2,8 @@ const ResponseBase = require('./index');
 
 class Auth extends ResponseBase {
   public access_token: string;
-  public expired_at: number;
-  public now: number;
+  public expired_at: Date | number;
+  public now: Date | number;
 
   public setAttributes(response: Auth): void {
     const { 

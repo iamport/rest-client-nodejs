@@ -7,10 +7,10 @@ class Certification extends ResponseBase {
   public pg_provider?: string;
   public name?: string;
   public gender?: string;
-  public birth?: number;
+  public birth?: Date | number;
   public foreigner?: boolean;
   public certified?: boolean;
-  public certified_at?: number;
+  public certified_at?: Date | number;
   public unique_key?: string;
   public unique_in_site?: string;
   public origin?: string;

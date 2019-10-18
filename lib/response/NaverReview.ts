@@ -10,8 +10,8 @@ class NaverReview extends ResponseBase {
   public product_name: string;
   public product_option_name?: string;
   public writer: string;
-  public created_at: number;
-  public modified_at?: number;
+  public created_at: Date | number;
+  public modified_at?: Date | number;
 
   public setAttributes(response: NaverReview): void {
     const {

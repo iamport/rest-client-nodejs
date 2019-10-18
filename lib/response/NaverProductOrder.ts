@@ -30,7 +30,7 @@ class NaverProductOrder extends ResponseBase {
   public orderer: NaverPayOrderer;
   public shipping_address: NaverPayAddress;
   public shipping_memo: string;
-  public shipping_due: number;
+  public shipping_due: Date | number;
   public individual_code: string;
 
   public setAttributes(response: NaverProductOrder): void {
@@ -67,7 +67,7 @@ class NaverProductOrder extends ResponseBase {
     this.orderer = orderer;
     this.shipping_address = shipping_address;
     this.shipping_memo = shipping_memo;
-    this.shipping_due = shipping_due;
+    this.shipping_due = this.timeToDate(shipping_due);
     this.individual_code = individual_code;
   }
 }

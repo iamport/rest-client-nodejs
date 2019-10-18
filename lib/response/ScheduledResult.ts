@@ -5,7 +5,7 @@ const scheduledStatusType = ScheduledStatus.getType();
 class ScheduledResult extends ResponseBase {
   public customer_uid?: string;
   public merchant_uid?: string;
-  public schedule_at?: number;
+  public schedule_at?: Date | number;
   public amount?: number;
   public name?: string;
   public buyer_name?: string;

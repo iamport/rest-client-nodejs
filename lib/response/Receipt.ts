@@ -8,8 +8,8 @@ class Receipt extends ResponseBase {
   public amount: number;
   public vat: number;
   public receipt_url?: string;
-  public applied_at: number;
-  public cancelled_at?: number;
+  public applied_at: Date | number;
+  public cancelled_at?: Date | number;
 
   public setAttributes(response: Receipt): void {
     const {

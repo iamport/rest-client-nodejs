@@ -13,7 +13,7 @@ interface AmountBase {
   primary: Amount,
   secondary: Amount,
   discount: Amount,
-  created?: number,
+  created?: Date | number,
 };
 
 class PaymentAmount extends ResponseBase {

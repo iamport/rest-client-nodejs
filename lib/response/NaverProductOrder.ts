@@ -15,7 +15,7 @@ interface NaverPayAddress {
   name: string,
 };
 
-class NaverPay extends ResponseBase {
+class NaverProductOrder extends ResponseBase {
   public product_order_id: string;
   public product_order_status: string;
   public claim_type: string;
@@ -33,7 +33,7 @@ class NaverPay extends ResponseBase {
   public shipping_due: number;
   public individual_code: string;
 
-  public setAttributes(response: NaverPay): void {
+  public setAttributes(response: NaverProductOrder): void {
     const {
       product_order_id,
       product_order_status,
@@ -73,4 +73,4 @@ class NaverPay extends ResponseBase {
 }
 
 export {};
-module.exports = NaverPay;
+module.exports = NaverProductOrder;

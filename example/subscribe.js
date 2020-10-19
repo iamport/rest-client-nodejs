@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const IamportIterator = require('../lib/IamportIterator');
 const { Subscribe } = require('../lib/request');
 
@@ -77,8 +78,7 @@ module.exports = async (iamport) => {
   await getScheduleds.request(iamport)
   .then(async response => {
     result = _.concat(result, response.data.response.list);
-
-    const iterator = new IamportIterator(paymentByStatus);
+    const iterator = new IamportIterator(getScheduleds);
     while(iterator.hasNext()) {
       await iterator.next(iamport)
       .then(response => {

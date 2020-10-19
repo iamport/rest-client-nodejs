@@ -6,7 +6,7 @@ module.exports = async (iamport) => {
     merchant_uid: 'mid_1448280088556',
     amount: 1000,
   });
-  await iamport.request(postAmount)
+  await postAmount.request(iamport)
   .then(response => console.log('response: ', response.data))
   .catch(error => console.log('error: ', error.response.data));
 
@@ -14,7 +14,7 @@ module.exports = async (iamport) => {
   const getAmount = Prepare.getAmount({
     merchant_uid: 'mid_1448280088556',
   });
-  await iamport.request(getAmount)
+  await getAmount.request(iamport)
   .then(response => console.log('response: ', response.data))
   .catch(error => console.log('error: ', error.response.data));
 };

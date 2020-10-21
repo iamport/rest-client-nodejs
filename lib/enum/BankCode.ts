@@ -268,4 +268,4 @@ class BankCode extends EnumBase {
   }
 }
 
-module.exports = new BankCode();
+export default new BankCode();

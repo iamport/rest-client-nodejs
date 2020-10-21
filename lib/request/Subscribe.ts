@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { PaymentResponse, ScheduledResultResponse } = require('../response');
-const { ScheduledStatus } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './index';
+import { PaymentResponse, ScheduledResultResponse } from '../response';
+import { ScheduledStatus } from '../enum';
 
 import { MerchantUidParams } from '../../';
 
@@ -65,7 +65,7 @@ interface ScheduleData {
   birth?: string,
   pwd_2digit?: string,
   pg?: string,
-  schedules: Array<ScheduleInfo>,
+  schedules: ScheduleInfo[],
 };
 interface UnscheduleData {
   customer_uid: string,
@@ -147,4 +147,4 @@ class Subscribe extends RequestBase {
 }
 
 export {};
-module.exports = Subscribe;
+export default Subscribe;

@@ -1,4 +1,4 @@
-const { Cards } = require('../lib/request');
+import { Cards } from '../lib/request';
 
 module.exports = async (iamport) => {
   /* 모든 카드사 정보 조회 */

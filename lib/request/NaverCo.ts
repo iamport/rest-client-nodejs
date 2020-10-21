@@ -1,13 +1,13 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { NaverProductOrderResponse, NaverReviewResponse } = require('../response');
-const {
+import _ from 'lodash';
+import RequestBase from './index';
+import { NaverProductOrderResponse, NaverReviewResponse } from '../response';
+import {
   DeliveryMethod,
   ReturnReason,
   DeliveryCompany,
   CancelReason,
   WithholdReturnReason,
-} = require('../enum');
+} from '../enum';
 
 import { ImpUidParams } from '../../';
 
@@ -19,16 +19,16 @@ const withholdReturnReasonType = WithholdReturnReason.getType();
 
 interface CancelParams {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   reason?: typeof cancelReasonType,
 };
 interface PlaceData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
 };
 interface ShipData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   delivery_method: typeof deliveryMethodType,
   dispatched_at: number,
   delivery_company?: typeof deliveryCompanyType,
@@ -36,7 +36,7 @@ interface ShipData {
 };
 interface RequestReturnData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   reason?: typeof returnReasonType,
   delivery_method: typeof deliveryMethodType,
   delivery_company?: typeof deliveryCompanyType,
@@ -44,19 +44,19 @@ interface RequestReturnData {
 };
 interface WithholdReturnData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   reason?: typeof withholdReturnReasonType,
   memo: string,
   extra_charge: number,
 };
 interface RejectReturnData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   memo: string,
 };
 interface ApproveReturnData {
   imp_uid: string,
-  product_order_id?: Array<string>,
+  product_order_id?: string[],
   memo: string,
   extra_charge: number,
 };
@@ -219,7 +219,7 @@ class NaverCo extends RequestBase {
 
   /**
    * 액션에 실패한 네이버페이 주문번호를 리턴
-  */
+   */
   public async getFailedData(response: any): Promise<any> {
     return await this.getProductOrderId()
     .then((product_order_id: any) => {
@@ -233,19 +233,17 @@ class NaverCo extends RequestBase {
   /**
    * 요청에 네이버페이 주문번호가 있는 경우엔 리턴
    * 없는 경우엔 아임포트 번호에 대한 네이버페이 주문번호를 조회 결과를 리턴
-  */
+   */
   private async getProductOrderId(): Promise<any> {
     const { product_order_id } = this.data;
     if (Array.isArray(product_order_id) && product_order_id.length === 0) {
       const [, imp_uid] = this.url.match('/(?<=/payments/)(.*)(?=/naver)/');
 
-      return await NaverCo.getProductOrderId({ imp_uid })
-      .then((response: any) => response.data.response.map((eachData: any) => eachData.product_order_id))
-      .catch((error: any) => Promise.reject(error));
+      return NaverCo.getProductOrderIds({ imp_uid });
     }
     return product_order_id;
   }
 }
 
 export {};
-module.exports = NaverCo;
+export default NaverCo;

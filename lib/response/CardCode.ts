@@ -1,7 +1,7 @@
-const ResponseBase = require('./index');
-const Enum = require('../enum');
+import ResponseBase from './index';
+import { CardCode as EnumCardCode } from '../enum';
 
-const codeType = Enum.CardCode.getType();
+const codeType = EnumCardCode.getType();
 
 class CardCode extends ResponseBase {
   public code: typeof codeType;
@@ -15,4 +15,4 @@ class CardCode extends ResponseBase {
 }
 
 export {};
-module.exports = CardCode;
+export default CardCode;

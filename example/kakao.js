@@ -1,4 +1,4 @@
-const { Kakao } = require('../lib/request');
+import { Kakao } from '../lib/request';
 
 /* 카카오 */
 module.exports = async (iamport) => {

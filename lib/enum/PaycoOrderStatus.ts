@@ -22,4 +22,4 @@ class PaycoOrderStatus extends EnumBase {
   }
 }
 
-module.exports = new PaycoOrderStatus();
+export default new PaycoOrderStatus();

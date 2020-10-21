@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const IamportIterator = require('../lib/IamportIterator');
-const { Payments } = require('../lib/request');
+import _ from 'lodash';
+import IamportIterator from '../lib/IamportIterator';
+import { Payments } from '../lib/request';
 
 module.exports = async (iamport) => {
   /* 결제내역 조회 > 아임포트 번호 */

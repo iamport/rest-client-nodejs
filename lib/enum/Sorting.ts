@@ -31,4 +31,4 @@ class Sorting extends EnumBase {
   }
 }
 
-module.exports = new Sorting();
+export default new Sorting();

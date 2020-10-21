@@ -1,5 +1,5 @@
-const RequestBase = require('./index');
-const { AuthResponse } = require('../response');
+import RequestBase from './index';
+import { AuthResponse } from '../response';
 
 interface getTokenData {
   imp_key: string,
@@ -26,4 +26,4 @@ class Authenticate extends RequestBase {
 }
 
 export {};
-module.exports = Authenticate;
+export default Authenticate;

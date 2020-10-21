@@ -1,15 +1,15 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const {
+import _ from 'lodash';
+import RequestBase from './index';
+import {
   CustomerResponse,
   PaymentResponse,
   ScheduledResultResponse,
-} = require('../response');
-const { ScheduledStatus } = require('../enum');
+} from '../response';
+import { ScheduledStatus } from '../enum';
 
 const scheduledStatusType = ScheduledStatus.getType();
 interface BillingKeysParams {
-  customer_uid: Array<string>,
+  customer_uid: string[],
 };
 interface PostBillingKeyData {
   customer_uid: string,
@@ -105,4 +105,4 @@ class Customers extends RequestBase {
 }
 
 export {};
-module.exports = Customers;
+export default Customers;

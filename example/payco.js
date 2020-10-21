@@ -1,4 +1,4 @@
-const { Payco } = require('../lib/request');
+import { Payco } from '../lib/request';
 
 /* 페이코 */
 module.exports = async (iamport) => {

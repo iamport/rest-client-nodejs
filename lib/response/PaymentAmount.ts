@@ -1,5 +1,5 @@
-const _ = require('lodash');
-const ResponseBase = require('./index');
+import _ from 'lodash';
+import ResponseBase from './index';
 
 interface Amount {
   tax_free: number;
@@ -22,9 +22,9 @@ class PaymentAmount extends ResponseBase {
   public primary: Amount;
   public secondary: Amount;
   public discount: Amount;
-  public histories?: Array<AmountBase>;
+  public histories?: AmountBase[];
 
-  setAttributes(response: PaymentAmount): void {
+  public setAttributes(response: PaymentAmount): void {
     const {
       amount,
       cash_receipt,
@@ -48,4 +48,4 @@ class PaymentAmount extends ResponseBase {
 }
 
 export {};
-module.exports = PaymentAmount;
+export default PaymentAmount;

@@ -52,4 +52,4 @@ class KakaoOrderStatus extends EnumBase {
   }
 }
 
-module.exports = new KakaoOrderStatus();
+export default new KakaoOrderStatus();

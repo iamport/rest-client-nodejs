@@ -1,4 +1,4 @@
-const { Receipts } = require('../lib/request');
+import { Receipts } from '../lib/request';
 
 /* 현금영수증 */
 module.exports = async (iamport) => {

@@ -22,4 +22,4 @@ class DeliveryMethod extends EnumBase {
   }
 }
 
-module.exports = new DeliveryMethod();
+export default new DeliveryMethod();

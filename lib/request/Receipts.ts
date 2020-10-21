@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { ReceiptResponse } = require('../response');
-const { IdentifierType, IdentifierFor } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './index';
+import { ReceiptResponse } from '../response';
+import { IdentifierType, IdentifierFor } from '../enum';
 
 import { ImpUidParams } from '../../';
 
@@ -52,4 +52,4 @@ class Receipts extends RequestBase {
 }
 
 export {};
-module.exports = Receipts;
+export default Receipts;

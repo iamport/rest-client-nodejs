@@ -1,7 +1,7 @@
-const ResponseBase = require('./index');
-const Enum = require('../enum');
+import ResponseBase from './index';
+import { PaycoOrderStatus } from '../enum';
 
-const paycoOrderStatusType = Enum.PaycoOrderStatus.getType();
+const paycoOrderStatusType = PaycoOrderStatus.getType();
 class PaycoStatus extends ResponseBase {
   public status: typeof paycoOrderStatusType;
 
@@ -13,4 +13,4 @@ class PaycoStatus extends ResponseBase {
 }
 
 export {};
-module.exports = PaycoStatus;
+export default PaycoStatus;

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm start",
     "lint": "tslint -p tsconfig.json",
-    "build": "npm run lint && npm run test && tsc",
+    "build": "npm run lint && tsc",
     "test": "jest --config jestconfig.json",
     "example": "ts-node example/index.js"
   },
@@ -31,6 +31,8 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.162",
+    "@types/qs": "^6.9.5",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",

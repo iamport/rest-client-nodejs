@@ -1,6 +1,6 @@
-const RequestBase = require('./index');
-const { PaymentResponse, VbankHolderResponse } = require('../response');
-const { SettleVbankCode, BankCode } = require('../enum');
+import RequestBase from './index';
+import { PaymentResponse, VbankHolderResponse } from '../response';
+import { SettleVbankCode, BankCode } from '../enum';
 
 import { ImpUidParams } from '../../';
 
@@ -20,7 +20,7 @@ interface PostData {
   buyer_addr?: string,
   buyer_postcode?: string,
   pg?: string,
-  notice_url?: Array<string>,
+  notice_url?: string[],
   custom_data?: string,
 };
 interface PutData {
@@ -79,4 +79,4 @@ class Vbanks extends RequestBase {
 }
 
 export {};
-module.exports = Vbanks;
+export default Vbanks;

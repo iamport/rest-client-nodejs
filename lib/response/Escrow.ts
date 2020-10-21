@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './index';
 
 class Escrow extends ResponseBase {
   public company: string;
@@ -6,7 +6,7 @@ class Escrow extends ResponseBase {
   public sent_at: number | Date;
   public applied_at: number | Date;
 
-  setAttributes(response: Escrow): void {
+  public setAttributes(response: Escrow): void {
     const {
       company,
       invoice,
@@ -22,4 +22,4 @@ class Escrow extends ResponseBase {
 }
 
 export {};
-module.exports = Escrow;
+export default Escrow;

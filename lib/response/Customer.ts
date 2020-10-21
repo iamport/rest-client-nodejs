@@ -1,5 +1,5 @@
-const ResponseBase = require('./index');
-const { CardCode } = require('../enum');
+import ResponseBase from './index';
+import { CardCode } from '../enum';
 
 const cardCodeType = CardCode.getType();
 class Customer extends ResponseBase {
@@ -15,7 +15,7 @@ class Customer extends ResponseBase {
   public inserted: Date | number;
   public updated: Date | number;
 
-  setAttributes(response: Customer): void {
+  public setAttributes(response: Customer): void {
     const {
       customer_uid,
       card_name,
@@ -45,4 +45,4 @@ class Customer extends ResponseBase {
 }
 
 export {};
-module.exports = Customer;
+export default Customer;

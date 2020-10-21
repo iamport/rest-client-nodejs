@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './index';
 
 class NaverCashAmount extends ResponseBase {
   public amount_total: number;
@@ -25,4 +25,4 @@ class NaverCashAmount extends ResponseBase {
 }
 
 export {};
-module.exports = NaverCashAmount;
+export default NaverCashAmount;

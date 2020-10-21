@@ -49,4 +49,4 @@ class LogisCode extends EnumBase {
   }
 }
 
-module.exports = new LogisCode();
+export default new LogisCode();

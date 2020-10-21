@@ -25,4 +25,4 @@ class IdentifierType extends EnumBase {
   }
 }
 
-module.exports = new IdentifierType();
+export default new IdentifierType();

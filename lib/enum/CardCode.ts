@@ -79,4 +79,4 @@ class CardCode extends EnumBase {
   }
 }
 
-module.exports = new CardCode();
+export default new CardCode();

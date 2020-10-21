@@ -46,4 +46,4 @@ class ReturnReason extends EnumBase {
   }
 }
 
-module.exports = new ReturnReason();
+export default new ReturnReason();

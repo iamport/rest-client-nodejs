@@ -1,4 +1,4 @@
-const { Vbanks } = require('../lib/request');
+import { Vbanks } from '../lib/request';
 
 module.exports = async (iamport) => {
   /* 가상계좌 생성 */

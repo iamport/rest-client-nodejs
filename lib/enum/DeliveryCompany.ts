@@ -133,4 +133,4 @@ class DeliveryCompany extends EnumBase {
   }
 }
 
-module.exports = new DeliveryCompany();
+export default new DeliveryCompany();

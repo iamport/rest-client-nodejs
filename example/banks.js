@@ -1,4 +1,4 @@
-const { Banks } = require('../lib/request');
+import { Banks } from '../lib/request';
 
 module.exports = async (iamport) => {
   /* 모든 은행 정보 조회 */

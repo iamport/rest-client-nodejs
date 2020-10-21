@@ -1,8 +1,8 @@
-const _ = require('lodash');
-const axios = require('axios');
-const qs = require('qs');
+import axios from 'axios';
+import _ from 'lodash';
+import qs from 'qs';
 
-const { BASE_URL } = require('./constants');
+import { BASE_URL } from './constants';
 
 import { Headers } from '../';
 

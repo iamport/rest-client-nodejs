@@ -1,5 +1,22 @@
-const _ = require('lodash');
-const { List, Item, Collection } = require('../response');
+import _ from 'lodash';
+import Authenticate from './Authenticate';
+import Payments from './Payments';
+import NaverPay from './NaverPay';
+import NaverCo from './NaverCo';
+import Vbanks from './Vbanks';
+import Prepare from './Prepare';
+import Escrows from './Escrows';
+import Certifications from './Certifications';
+import Cards from './Cards';
+import Banks from './Banks';
+import Receipts from './Receipts';
+import External from './External';
+import Kakao from './Kakao';
+import Payco from './Payco';
+import Subscribe from './Subscribe';
+import Customers from './Customers';
+
+import { List, Item, Collection } from '../response';
 
 import Iamport from '../Iamport';
 import { Method, Config, AxiosResponse } from '../..';
@@ -41,7 +58,7 @@ class RequestBase {
          * axios 에러가 발생한 경우, typeof error = AxiosError
          * axios는 성공했지만 code가 0이 아닌 경우, typeof error = IamportError
          * 두 type을 맞추기 위해 아래와 같은 코드 작성
-         * */ 
+         */ 
         return Promise.reject({
           response: {
             data,
@@ -60,13 +77,13 @@ class RequestBase {
 
     if (status === 207 && this.keepGoing) {
       await this.getFailedData(response)
-      .then((failedData: any) => responseData['failed'] = failedData)
+      .then((failedData: any) => responseData.failed = failedData)
       .catch((error: any) => {
         /**
          * TODO: failedData 조회 실패시 로직
          * API콜 전체에 대해 ERROR 처리 또는
          * getFailedData에 대한 실패 메시지 전달
-        */
+         */
         return Promise.reject(error);
       });
     }
@@ -95,20 +112,21 @@ class RequestBase {
 }
 
 export default RequestBase;
-module.exports = RequestBase;
-module.exports.Authenticate = require('./Authenticate');
-module.exports.Payments = require('./Payments');
-module.exports.NaverPay = require('./NaverPay');
-module.exports.NaverCo = require('./NaverCo');
-module.exports.Vbanks = require('./Vbanks');
-module.exports.Prepare = require('./Prepare');
-module.exports.Escrows = require('./Escrows');
-module.exports.Certifications = require('./Certifications');
-module.exports.Cards = require('./Cards');
-module.exports.Banks = require('./Banks');
-module.exports.Receipts = require('./Receipts');
-module.exports.External = require('./External');
-module.exports.Kakao = require('./Kakao');
-module.exports.Payco = require('./Payco');
-module.exports.Subscribe = require('./Subscribe');
-module.exports.Customers = require('./Customers');
+export {
+  Authenticate,
+  Payments,
+  NaverPay,
+  NaverCo,
+  Vbanks,
+  Prepare,
+  Escrows,
+  Certifications,
+  Cards,
+  Banks,
+  Receipts,
+  External,
+  Kakao,
+  Payco,
+  Subscribe,
+  Customers,
+};

@@ -19,4 +19,4 @@ class IdentifierFor extends EnumBase {
   }
 }
 
-module.exports = new IdentifierFor();
+export default new IdentifierFor();

@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { NaverCashAmountResponse} = require('../response');
+import _ from 'lodash';
+import RequestBase from './index';
+import { NaverCashAmountResponse} from '../response';
 
 import { ImpUidParams } from '../../';
 
@@ -36,4 +36,4 @@ class NaverPay extends RequestBase {
 }
 
 export {};
-module.exports = NaverPay;
+export default NaverPay;

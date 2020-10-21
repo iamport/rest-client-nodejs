@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './index';
 
 class Certification extends ResponseBase {
   public imp_uid: string;
@@ -48,4 +48,4 @@ class Certification extends ResponseBase {
 }
 
 export {};
-module.exports = Certification;
+export default Certification;

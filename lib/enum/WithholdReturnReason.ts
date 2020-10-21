@@ -28,4 +28,4 @@ class WithholdReturnReason extends EnumBase {
   }
 }
 
-module.exports = new WithholdReturnReason();
+export default new WithholdReturnReason();

@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './index';
 
 class Auth extends ResponseBase {
   public access_token: string;
@@ -19,4 +19,4 @@ class Auth extends ResponseBase {
 }
 
 export {};
-module.exports = Auth;
+export default Auth;

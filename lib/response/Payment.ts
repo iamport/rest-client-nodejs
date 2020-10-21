@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './index';
 
 interface PaymentCancelAnnotation {
   pg_tid: string,
@@ -50,8 +50,8 @@ class Payment extends ResponseBase {
   public fail_reason?: string;
   public cancel_reason?: string;
   public receipt_url?: string;
-  public cancel_history?: Array<PaymentCancelAnnotation>;
-  public cancel_receipt_urls?: Array<string>;
+  public cancel_history?: PaymentCancelAnnotation[];
+  public cancel_receipt_urls?: string[];
   public cash_receipt_issued?: boolean;
 
   public setAttributes(response: Payment): void {
@@ -150,4 +150,4 @@ class Payment extends ResponseBase {
 }
 
 export {};
-module.exports = Payment;
+export default Payment;

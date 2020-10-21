@@ -1,5 +1,5 @@
-const RequestBase = require('./index');
-const { CertificationResponse } = require('../response');
+import RequestBase from './index';
+import { CertificationResponse } from '../response';
 
 import { ImpUidParams } from '../../';
 
@@ -28,4 +28,4 @@ class Certifications extends RequestBase {
 }
 
 export {};
-module.exports = Certifications;
+export default Certifications;

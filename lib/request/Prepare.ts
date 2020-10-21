@@ -1,5 +1,5 @@
-const RequestBase = require('./index');
-const { PrepareResponse } = require('../response');
+import RequestBase from './index';
+import { PrepareResponse } from '../response';
 
 interface PostData {
   merchant_uid: string,
@@ -35,4 +35,4 @@ class Prepare extends RequestBase {
 }
 
 export {};
-module.exports = Prepare;
+export default Prepare;

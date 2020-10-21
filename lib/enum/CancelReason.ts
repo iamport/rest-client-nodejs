@@ -22,4 +22,4 @@ class CancelReason extends EnumBase {
   }
 }
 
-module.exports = new CancelReason();
+export default new CancelReason();

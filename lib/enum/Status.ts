@@ -28,4 +28,4 @@ class Status extends EnumBase {
   }
 }
 
-module.exports = new Status();
+export default new Status();

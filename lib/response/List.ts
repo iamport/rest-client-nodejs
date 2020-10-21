@@ -1,4 +1,4 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
 class List {
   public code: number;
@@ -18,4 +18,4 @@ class List {
 }
 
 export {};
-module.exports = List;
+export default List;

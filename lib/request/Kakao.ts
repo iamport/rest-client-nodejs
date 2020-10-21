@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { KakaoOrderResponse } = require('../response');
+import _ from 'lodash';
+import RequestBase from './index';
+import { KakaoOrderResponse } from '../response';
 
 interface getParams {
   payment_request_date: string,
@@ -26,4 +26,4 @@ class Kakao extends RequestBase {
 }
 
 export {};
-module.exports = Kakao;
+export default Kakao;

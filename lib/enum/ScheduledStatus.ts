@@ -22,4 +22,4 @@ class ScheduledStatus extends EnumBase {
   }
 }
 
-module.exports = new ScheduledStatus();
+export default new ScheduledStatus();

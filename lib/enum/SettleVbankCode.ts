@@ -52,4 +52,4 @@ class SettleVbankCode extends EnumBase {
   }
 }
 
-module.exports = new SettleVbankCode();
+export default new SettleVbankCode();

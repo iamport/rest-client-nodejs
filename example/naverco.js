@@ -1,4 +1,4 @@
-const { NaverCo } = require('../lib/request');
+import { NaverCo } from '../lib/request';
 
 module.exports = async (iamport) => {
   /* 상품 발주 */

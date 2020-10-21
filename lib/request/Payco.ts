@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { PaycoStatusResponse } = require('../response');
-const { PaycoOrderStatus } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './index';
+import { PaycoStatusResponse } from '../response';
+import { PaycoOrderStatus } from '../enum';
 
 const paycoOrderStatusType = PaycoOrderStatus.getType();
 interface postOrderStatusData {
@@ -30,4 +30,4 @@ class Payco extends RequestBase {
 }
 
 export {};
-module.exports = Payco;
+export default Payco;

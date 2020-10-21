@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "typeRoots": [ "node_modules/@types" ], 
     "declaration": true,
-    "outDir": "_build",
-    "forceConsistentCasingInFileNames": true
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "."
   },
   "include": [
     "lib/"

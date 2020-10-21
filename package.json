@@ -9,7 +9,8 @@
     "lint": "tslint -p tsconfig.json",
     "build": "npm run lint && tsc",
     "test": "jest --config jestconfig.json",
-    "example": "ts-node example/index.js"
+    "example": "ts-node example/index.js",
+    "prepublish": "rm -rf dist && tsc"
   },
   "author": {
     "name": "Solee Deedee Choi",

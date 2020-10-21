@@ -2,6 +2,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import qs from 'qs';
 
+import * as Request from './request';
 import { BASE_URL } from './constants';
 
 import { Headers } from '../';
@@ -74,4 +75,6 @@ class Iamport {
 }
 
 export default Iamport;
-module.exports = Iamport;
+export {
+  Request,
+}

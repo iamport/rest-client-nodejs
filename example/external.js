@@ -1,4 +1,4 @@
-import { External } from '../lib/request';
+const { External } = require('../lib/request');
 
 /* 아임포트 별개 현금결제 */
 module.exports = async (iamport) => {

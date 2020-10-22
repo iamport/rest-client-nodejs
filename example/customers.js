@@ -1,4 +1,4 @@
-import { Customers } from '../lib/request';
+const { Customers } = require('../lib/request');
 
 /* 정기결제용 구매자 빌링키 */
 module.exports = async (iamport) => {

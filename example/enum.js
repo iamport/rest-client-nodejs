@@ -1,4 +1,4 @@
-import {
+const {
   Sorting,
   Status,
   DeliveryMethod,
@@ -15,7 +15,7 @@ import {
   PaycoOrderStatus,
   ScheduledStatus,
   WithholdReturnReason,
-} from '../lib/enum';
+} = require('../lib/enum');
 
 module.exports = () => {
   console.log(Sorting.getKeys());

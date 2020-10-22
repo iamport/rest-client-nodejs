@@ -1,4 +1,4 @@
-import { Authenticate } from '../lib/request';
+const { Authenticate } = require('../lib/request');
 
 module.exports = async (iamport) => {
   /* 토큰 발급 */

@@ -1,4 +1,4 @@
-import { Prepare } from '../lib/request';
+const { Prepare } = require('../lib/request');
 
 module.exports = async (iamport) => {
   /* 결제 예정 금액 등록 */

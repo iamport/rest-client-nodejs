@@ -1,4 +1,4 @@
-import { NaverPay } from '../lib/request';
+const { NaverPay } = require('../lib/request');
 
 /* 네이버페이 > 결제형 */
 module.exports = async (iamport) => {

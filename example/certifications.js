@@ -1,4 +1,4 @@
-import { Certifications } from '../lib/request';
+const { Certifications } = require('../lib/request');
 
 module.exports = async (iamport) => {
   /* 휴대폰 본인인증 정보 조회 */

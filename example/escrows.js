@@ -1,4 +1,4 @@
-import { Escrows } from '../lib/request';
+const { Escrows } = require('../lib/request');
 
 /* 배송정보 등록 */
 const logis = {

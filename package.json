@@ -1,6 +1,6 @@
 {
   "name": "iamport-rest-client-nodejs",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "NodeJS용 아임포트 REST API Client 입니다.",
   "main": "dist/iamport.js",
   "types": "dist/iamport.d.ts",

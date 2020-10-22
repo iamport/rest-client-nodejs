@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class SettleVbankCode extends EnumBase {
   public IBK: string = '003';
@@ -51,5 +51,4 @@ class SettleVbankCode extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new SettleVbankCode();
+export default new SettleVbankCode();

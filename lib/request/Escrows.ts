@@ -1,7 +1,7 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { EscrowResponse } = require('../response');
-const { LogisCode } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './Base';
+import { EscrowResponse } from '../response';
+import { LogisCode } from '../enum';
 
 const logisCodeType = LogisCode.getType();
 
@@ -52,5 +52,4 @@ class Escrows extends RequestBase {
   }
 }
 
-export {};
-module.exports = Escrows;
+export default Escrows;

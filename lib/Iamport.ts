@@ -1,10 +1,12 @@
-const _ = require('lodash');
-const axios = require('axios');
-const qs = require('qs');
+import axios from 'axios';
+import _ from 'lodash';
+import qs from 'qs';
 
-const { BASE_URL } = require('./constants');
+import * as Request from './request';
+import * as Response from './response';
 
-import { Headers } from '../';
+import { BASE_URL } from './constants';
+import { Headers } from './Interfaces';
 
 interface IamportProperties {
   apiKey: string,
@@ -20,7 +22,7 @@ interface Token {
   expired: number,
 };
 
-class Iamport {
+export class Iamport {
   private apiKey: string;
   private apiSecret: string;
   private token: Token;
@@ -73,5 +75,7 @@ class Iamport {
   }
 }
 
-export default Iamport;
-module.exports = Iamport;
+export {
+  Request,
+  Response
+}

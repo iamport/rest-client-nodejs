@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class PaycoOrderStatus extends EnumBase {
   public DELIVERY_START: string = 'DELIVERY_START';
@@ -21,5 +21,4 @@ class PaycoOrderStatus extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new PaycoOrderStatus();
+export default new PaycoOrderStatus();

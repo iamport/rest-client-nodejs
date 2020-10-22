@@ -14,5 +14,4 @@ class Item {
   }
 }
 
-export {};
-module.exports = Item;
+export default Item;

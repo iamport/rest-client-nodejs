@@ -1,9 +1,9 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { PaymentResponse, PaymentAmountResponse } = require('../response');
-const { Status, Sorting } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './Base';
+import { PaymentResponse, PaymentAmountResponse } from '../response';
+import { Status, Sorting } from '../enum';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 const StatusType = Status.getType();
 const SortingType = Sorting.getType();
@@ -122,5 +122,4 @@ class Payments extends RequestBase {
   }
 }
 
-export {};
-module.exports = Payments;
+export default Payments;

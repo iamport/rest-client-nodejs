@@ -1,7 +1,7 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-import Iamport from './Iamport';
-import RequestBase from './request';
+import { Iamport } from './Iamport';
+import RequestBase from './request/Base';
 
 interface Iterator {
   hasNext(): boolean;
@@ -28,6 +28,4 @@ class IamportIterator implements Iterator {
     return this.request.request(iamport);
   }
 }
-
 export default IamportIterator;
-module.exports = IamportIterator;

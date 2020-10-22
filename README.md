@@ -42,7 +42,7 @@ $ yarn example [테스트 타깃] [apiKey] [apiSecret]
 | banks          | 금융결제원 은행 코드 테스트      |
 | enum           | ENUM 테스트                 |
 
-`REST API 키`와 `REST API SECRET 키`는 아임포트 관리자페이지 > 시스템 설정 > 내정보에서 확인하실 수 있습니다. 자세한 정보는 [가맹점 정보 확인하기](https://docs.iamport.kr/implementation/account-info)를 참고해주세요.
+`REST API 키`와 `REST API SECRET 키`는 아임포트 관리자페이지 > 시스템 설정 > 내정보에서 확인하실 수 있습니다. 자세한 정보는 [가맹점 정보 확인하기](https://docs.iamport.kr/implementation/account-info)를 참고해주세요.
 미입력시 아임포트 테스트용 `REST API 키`와 `REST API SECRET 키`로 테스트가 진행됩니다.
 
 테스트 예시는 아래와 같습니다.

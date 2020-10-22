@@ -1,6 +1,6 @@
-const RequestBase = require('./index');
-const { CardCodeResponse } = require('../response');
-const { CardCode } = require('../enum');
+import RequestBase from './Base';
+import { CardCodeResponse } from '../response';
+import { CardCode } from '../enum';
 
 const cardCodeType = CardCode.getType();
 interface getCardParams {
@@ -31,5 +31,4 @@ class Cards extends RequestBase {
   }
 }
 
-export {};
-module.exports = Cards;
+export default Cards;

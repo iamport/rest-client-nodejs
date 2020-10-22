@@ -1,14 +1,16 @@
 {
-  "name": "iamport-rest-client-php",
+  "name": "iamport-rest-client-nodejs",
   "version": "0.9.0",
   "description": "NodeJS용 아임포트 REST API Client 입니다.",
-  "main": "index.js",
+  "main": "dist/iamport.js",
+  "types": "dist/iamport.d.ts",
   "scripts": {
     "start": "npm start",
     "lint": "tslint -p tsconfig.json",
-    "build": "npm run lint && npm run test && tsc",
+    "build": "npm run lint && tsc",
     "test": "jest --config jestconfig.json",
-    "example": "ts-node example/index.js"
+    "example": "ts-node example/index.js",
+    "prepublish": "rm -rf dist && tsc"
   },
   "author": {
     "name": "Solee Deedee Choi",
@@ -31,6 +33,8 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.162",
+    "@types/qs": "^6.9.5",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",

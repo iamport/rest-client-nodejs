@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class CancelReason extends EnumBase {
   public PRODUCT_UNSATISFIED: string = 'PRODUCT_UNSATISFIED';
@@ -21,5 +21,4 @@ class CancelReason extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new CancelReason();
+export default new CancelReason();

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class WithholdReturnReason extends EnumBase {
   public RETURN_DELIVERYFEE: string = 'RETURN_DELIVERYFEE';
@@ -27,5 +27,4 @@ class WithholdReturnReason extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new WithholdReturnReason();
+export default new WithholdReturnReason();

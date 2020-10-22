@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class IdentifierType extends EnumBase {
   public PERSON: string = 'person';
@@ -24,5 +24,4 @@ class IdentifierType extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new IdentifierType();
+export default new IdentifierType();

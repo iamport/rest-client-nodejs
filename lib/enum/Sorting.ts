@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class Sorting extends EnumBase {
   public STARTED_ASC: string = 'started';
@@ -30,5 +30,4 @@ class Sorting extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new Sorting();
+export default new Sorting();

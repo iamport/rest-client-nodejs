@@ -1,6 +1,12 @@
 {
   "extends": ["tslint:recommended", "tslint-config-prettier"],
   "rules": {
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "ordered-imports": false,
+    "variable-name": false,
+    "class-name": false,
+    "member-ordering": false,
+    "no-angle-bracket-type-assertion": false
   }
 }

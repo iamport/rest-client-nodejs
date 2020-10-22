@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class BankCode extends EnumBase {
   public BOK: string = '001';
@@ -267,5 +267,4 @@ class BankCode extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new BankCode();
+export default new BankCode();

@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './Base';
 
 interface NaverPayOrderer {
   name: string,
@@ -72,5 +72,4 @@ class NaverProductOrder extends ResponseBase {
   }
 }
 
-export {};
-module.exports = NaverProductOrder;
+export default NaverProductOrder;

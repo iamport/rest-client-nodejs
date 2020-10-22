@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class CardCode extends EnumBase {
   public BC: string = '361';
@@ -78,5 +78,4 @@ class CardCode extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new CardCode();
+export default new CardCode();

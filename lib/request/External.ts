@@ -1,19 +1,17 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { ExternalResponse } from '../response';
-import { IdentifierType, IdentifierFor } from '../enum';
+import { IdentifierTypeEnum, IdentifierForEnum } from '../enum';
 
 import { MerchantUidParams } from '../Interfaces';
 
-const identifierType = IdentifierType.getType();
-const identifierForType = IdentifierFor.getType();
 interface postExternalData {
   merchant_uid: string,
   name: string,
   amount: number,
   identifier: string,
-  identifier_type?: typeof identifierType,
-  type?: typeof identifierForType,
+  identifier_type?: IdentifierTypeEnum,
+  type?: IdentifierForEnum,
   buyer_name?: string,
   buyer_email?: string,
   buyer_tel?: string,

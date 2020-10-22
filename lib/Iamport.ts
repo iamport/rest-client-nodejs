@@ -4,6 +4,7 @@ import qs from 'qs';
 
 import * as Request from './request';
 import * as Response from './response';
+import * as Enum from './enum';
 
 import { BASE_URL } from './constants';
 import { Headers } from './Interfaces';
@@ -77,5 +78,6 @@ export class Iamport {
 
 export {
   Request,
-  Response
+  Response,
+  Enum
 }

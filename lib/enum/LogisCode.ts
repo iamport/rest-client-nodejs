@@ -1,19 +1,19 @@
-import EnumBase from './Base';
+export enum LogisCodeEnum {
+  LOGEN = 'LOGEN',
+  KOREX = 'KOREX',
+  HYUNDAI = 'HYUNDAI',
+  HANARO = 'HANARO',
+  SAGAWA = 'SAGAWA',
+  KGB = 'KGB',
+  YELLOWCAP = 'YELLOWCAP',
+  DONGBU = 'DONGBU',
+  EPOST = 'EPOST',
+  CJGLS = 'CJGLS',
+  HANJIN = 'HANJIN',
+  ETC = 'ETC',
+};
 
-class LogisCode extends EnumBase {
-  public LOGEN: string = 'LOGEN';
-  public KOREX: string = 'KOREX';
-  public HYUNDAI: string = 'HYUNDAI';
-  public HANARO: string = 'HANARO';
-  public SAGAWA: string = 'SAGAWA';
-  public KGB: string = 'KGB';
-  public YELLOWCAP: string = 'YELLOWCAP';
-  public DONGBU: string = 'DONGBU';
-  public EPOST: string = 'EPOST';
-  public CJGLS: string = 'CJGLS';
-  public HANJIN: string = 'HANJIN';
-  public ETC: string = 'ETC';
-
+class LogisCode {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

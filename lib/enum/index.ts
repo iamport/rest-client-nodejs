@@ -1,35 +1,37 @@
-import Sorting from './Sorting';
-import Status from './Status';
-import DeliveryMethod from './DeliveryMethod';
-import DeliveryCompany from './DeliveryCompany';
-import ReturnReason from './ReturnReason';
-import CancelReason from './CancelReason';
-import SettleVbankCode from './SettleVbankCode';
-import BankCode from './BankCode';
-import LogisCode from './LogisCode';
-import CardCode from './CardCode';
-import IdentifierType from './IdentifierType';
-import IdentifierFor from './IdentifierFor';
-import KakaoOrderStatus from './KakaoOrderStatus';
-import PaycoOrderStatus from './PaycoOrderStatus';
-import WithholdReturnReason from './WithholdReturnReason';
-import ScheduledStatus from './ScheduledStatus';
+import Base from './Base';
+import { SortingEnum } from './Sorting';
+import { StatusEnum } from './Status';
+import { DeliveryMethodEnum } from './DeliveryMethod';
+import { DeliveryCompanyEnum } from './DeliveryCompany';
+import { ReturnReasonEnum } from './ReturnReason';
+import { CancelReasonEnum } from './CancelReason';
+import { SettleVbankCodeEnum } from './SettleVbankCode';
+import { BankCodeEnum } from './BankCode';
+import { LogisCodeEnum } from './LogisCode';
+import { CardCodeEnum } from './CardCode';
+import { IdentifierTypeEnum } from './IdentifierType';
+import { IdentifierForEnum } from './IdentifierFor';
+import { KakaoOrderStatusEnum } from './KakaoOrderStatus';
+import { PaycoOrderStatusEnum } from './PaycoOrderStatus';
+import { WithholdReturnReasonEnum } from './WithholdReturnReason';
+import { ScheduledStatusEnum } from './ScheduledStatus';
 
 export {
-  Sorting,
-  Status,
-  DeliveryMethod,
-  DeliveryCompany,
-  ReturnReason,
-  CancelReason,
-  SettleVbankCode,
-  BankCode,
-  LogisCode,
-  CardCode,
-  IdentifierType,
-  IdentifierFor,
-  KakaoOrderStatus,
-  PaycoOrderStatus,
-  WithholdReturnReason,
-  ScheduledStatus,
+  Base,
+  SortingEnum,
+  StatusEnum,
+  DeliveryMethodEnum,
+  DeliveryCompanyEnum,
+  ReturnReasonEnum,
+  CancelReasonEnum,
+  SettleVbankCodeEnum,
+  BankCodeEnum,
+  LogisCodeEnum,
+  CardCodeEnum,
+  IdentifierTypeEnum,
+  IdentifierForEnum,
+  KakaoOrderStatusEnum,
+  PaycoOrderStatusEnum,
+  WithholdReturnReasonEnum,
+  ScheduledStatusEnum,
 };

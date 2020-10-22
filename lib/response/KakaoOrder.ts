@@ -1,7 +1,6 @@
 import ResponseBase from './Base';
-import { KakaoOrderStatus } from '../enum';
+import { KakaoOrderStatusEnum } from '../enum';
 
-const kakaoOrderStatusType = KakaoOrderStatus.getType();
 interface KakaoOrderPage {
   current_page: number,
   current_size: number,
@@ -34,7 +33,7 @@ interface KakaoOrderPaymentActionDetail {
 interface KakaoOrderDetail {
   id: string,
   cid: string,
-  status: typeof kakaoOrderStatusType,
+  status: KakaoOrderStatusEnum,
   partner_order_id: string,
   partner_user_id: string,
   payment_method_type: 'CARD' | 'MONEY',

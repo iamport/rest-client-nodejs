@@ -1,10 +1,9 @@
 import RequestBase from './Base';
 import { CardCodeResponse } from '../response';
-import { CardCode } from '../enum';
+import { CardCodeEnum } from '../enum';
 
-const cardCodeType = CardCode.getType();
 interface getCardParams {
-  code: typeof cardCodeType,
+  code: CardCodeEnum,
 };
 
 /* 금융결제원 표준 코드 기준 카드사 정보 조회 */

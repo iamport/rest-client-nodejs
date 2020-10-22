@@ -1,10 +1,10 @@
-import EnumBase from './Base';
+export enum CancelReasonEnum {
+  PRODUCT_UNSATISFIED = 'PRODUCT_UNSATISFIED',
+  DELAYED_DELIVERY = 'DELAYED_DELIVERY',
+  SOLD_OUT = 'SOLD_OUT',
+};
 
-class CancelReason extends EnumBase {
-  public PRODUCT_UNSATISFIED: string = 'PRODUCT_UNSATISFIED';
-  public DELAYED_DELIVERY: string = 'DELAYED_DELIVERY';
-  public SOLD_OUT: string = 'SOLD_OUT';
-
+class CancelReason {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

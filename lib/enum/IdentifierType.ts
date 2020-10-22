@@ -1,11 +1,11 @@
-import EnumBase from './Base';
+export enum IdentifierTypeEnum {
+  PERSON = 'person',
+  BUSINESS = 'business',
+  PHONE = 'phone',
+  TAXCARD = 'taxcard',
+};
 
-class IdentifierType extends EnumBase {
-  public PERSON: string = 'person';
-  public BUSINESS: string = 'business';
-  public PHONE: string = 'phone';
-  public TAXCARD: string = 'taxcard';
-
+class IdentifierType {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

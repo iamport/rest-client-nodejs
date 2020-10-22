@@ -1,9 +1,8 @@
 import ResponseBase from './Base';
-import { PaycoOrderStatus } from '../enum';
+import { PaycoOrderStatusEnum } from '../enum';
 
-const paycoOrderStatusType = PaycoOrderStatus.getType();
 class PaycoStatus extends ResponseBase {
-  public status: typeof paycoOrderStatusType;
+  public status: PaycoOrderStatusEnum;
 
   public setAttributes(response: PaycoStatus): void {
     const { status } = response;

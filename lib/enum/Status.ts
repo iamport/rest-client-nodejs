@@ -1,12 +1,12 @@
-import EnumBase from './Base';
+export enum StatusEnum {
+  ALL = 'all',
+  PAID = 'paid',
+  FAILED = 'failed',
+  CANCELLED = 'cancelled',
+  READY = 'ready',
+};
 
-class Status extends EnumBase {
-  public ALL: string = 'all';
-  public PAID: string = 'paid';
-  public FAILED: string = 'failed';
-  public CANCELLED: string = 'cancelled';
-  public READY: string = 'ready';
-
+class Status {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

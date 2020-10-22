@@ -22,7 +22,7 @@ const receiver = {
 module.exports = async (iamport) => {
   /* 배송정보 등록 */
   const postEscrow = Escrows.postEscrow({
-    imp_uid: 'imp_448280090638',
+    imp_uid: 'imp_436313381120',
     logis,
     sender,
     receiver,
@@ -33,7 +33,7 @@ module.exports = async (iamport) => {
 
   /* 배송정보 수정 */
   const putEscrow = Escrows.putEscrow({
-    imp_uid: 'imp_448280090638',
+    imp_uid: 'imp_436313381120',
     logis,
     sender,
     receiver,

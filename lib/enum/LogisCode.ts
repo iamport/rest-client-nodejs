@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class LogisCode extends EnumBase {
   public LOGEN: string = 'LOGEN';
@@ -48,5 +48,4 @@ class LogisCode extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new LogisCode();
+export default new LogisCode();

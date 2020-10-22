@@ -1,9 +1,9 @@
-const _ = require('lodash');
-const RequestBase = require('./index');
-const { ExternalResponse } = require('../response');
-const { IdentifierType, IdentifierFor } = require('../enum');
+import _ from 'lodash';
+import RequestBase from './Base';
+import { ExternalResponse } from '../response';
+import { IdentifierType, IdentifierFor } from '../enum';
 
-import { MerchantUidParams } from '../../';
+import { MerchantUidParams } from '../Interfaces';
 
 const identifierType = IdentifierType.getType();
 const identifierForType = IdentifierFor.getType();
@@ -55,5 +55,4 @@ class External extends RequestBase {
   }
 }
 
-export {};
-module.exports = External;
+export default External;

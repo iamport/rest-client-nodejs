@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './Base';
 
 class NaverReview extends ResponseBase {
   public review_id: string;
@@ -42,5 +42,4 @@ class NaverReview extends ResponseBase {
   }
 }
 
-export {};
-module.exports = NaverReview;
+export default NaverReview;

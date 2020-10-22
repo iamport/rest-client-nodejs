@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class Status extends EnumBase {
   public ALL: string = 'all';
@@ -27,5 +27,4 @@ class Status extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new Status();
+export default new Status();

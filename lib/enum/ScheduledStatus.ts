@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class ScheduledStatus extends EnumBase {
   public SCHEDULED: string = 'scheduled';
@@ -21,5 +21,4 @@ class ScheduledStatus extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new ScheduledStatus();
+export default new ScheduledStatus();

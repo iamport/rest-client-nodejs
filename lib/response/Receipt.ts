@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './Base';
 
 class Receipt extends ResponseBase {
   public imp_uid: string;
@@ -36,5 +36,4 @@ class Receipt extends ResponseBase {
   }
 }
 
-export {};
-module.exports = Receipt;
+export default Receipt;

@@ -1,5 +1,5 @@
-const ResponseBase = require('./index');
-const { KakaoOrderStatus } = require('../enum');
+import ResponseBase from './Base';
+import { KakaoOrderStatus } from '../enum';
 
 const kakaoOrderStatusType = KakaoOrderStatus.getType();
 interface KakaoOrderPage {
@@ -48,14 +48,14 @@ interface KakaoOrderDetail {
   approved_at: Date,
   canceled_at: Date,
   selected_card_info: KakaoOrderCardInfo,
-  payment_action_details: Array<KakaoOrderPaymentActionDetail>
+  payment_action_details: KakaoOrderPaymentActionDetail[],
 };
 
 class KakaoOrder extends ResponseBase {
   public page: KakaoOrderPage;
   public payment_request_date: string;
   public cid: string;
-  public orders: Array<KakaoOrderDetail>
+  public orders: KakaoOrderDetail[];
 
   public setAttributes(response: KakaoOrder): void {
     const {
@@ -72,5 +72,4 @@ class KakaoOrder extends ResponseBase {
   }
 }
 
-export {};
-module.exports = KakaoOrder;
+export default KakaoOrder;

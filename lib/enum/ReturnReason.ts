@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class ReturnReason extends EnumBase {
   public INTENT_CHANGED: string = 'INTENT_CHANGED';
@@ -45,5 +45,4 @@ class ReturnReason extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new ReturnReason();
+export default new ReturnReason();

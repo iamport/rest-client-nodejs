@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class KakaoOrderStatus extends EnumBase {
   public READY: string = 'READY';
@@ -51,5 +51,4 @@ class KakaoOrderStatus extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new KakaoOrderStatus();
+export default new KakaoOrderStatus();

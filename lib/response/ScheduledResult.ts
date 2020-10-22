@@ -1,5 +1,5 @@
-const ResponseBase = require('./index');
-const { ScheduledStatus } = require('../enum');
+import ResponseBase from './Base';
+import { ScheduledStatus } from '../enum';
 
 const scheduledStatusType = ScheduledStatus.getType();
 class ScheduledResult extends ResponseBase {
@@ -47,5 +47,4 @@ class ScheduledResult extends ResponseBase {
   }
 }
 
-export {};
-module.exports = ScheduledResult;
+export default ScheduledResult;

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class DeliveryCompany extends EnumBase {
   public CJGLS: string = 'CJGLS';
@@ -132,5 +132,4 @@ class DeliveryCompany extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new DeliveryCompany();
+export default new DeliveryCompany();

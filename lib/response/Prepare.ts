@@ -1,10 +1,10 @@
-const ResponseBase = require('./index');
+import ResponseBase from './Base';
 
 class Prepare extends ResponseBase {
   public merchant_uid: string;
   public amount: number;
 
-  setAttributes(response: Prepare): void {
+  public setAttributes(response: Prepare): void {
     const { merchant_uid, amount } = response;
 
     this.merchant_uid = merchant_uid;
@@ -12,5 +12,4 @@ class Prepare extends ResponseBase {
   }
 }
 
-export {};
-module.exports = Prepare;
+export default Prepare;

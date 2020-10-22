@@ -1,6 +1,6 @@
-const RequestBase = require('./index');
-const { BankCodeResponse } = require('../response');
-const { BankCode } = require('../enum');
+import RequestBase from './Base';
+import { BankCodeResponse } from '../response';
+import { BankCode } from '../enum';
 
 const bankCodeType = BankCode.getType();
 interface getBankParams {
@@ -30,6 +30,4 @@ class Banks extends RequestBase {
     return banks;
   }
 }
-
-export {};
-module.exports = Banks;
+export default Banks;

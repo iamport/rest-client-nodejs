@@ -1,7 +1,7 @@
-const ResponseBase = require('./index');
-const Enum = require('../enum');
+import ResponseBase from './Base';
+import { BankCode as EmumBankCode } from '../enum';
 
-const codeType = Enum.BankCode.getType();
+const codeType = EmumBankCode.getType();
 
 class BankCode extends ResponseBase {
   public code: typeof codeType;
@@ -14,5 +14,4 @@ class BankCode extends ResponseBase {
   }
 }
 
-export {};
-module.exports = BankCode;
+export default BankCode;

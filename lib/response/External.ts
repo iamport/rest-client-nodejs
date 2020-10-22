@@ -1,4 +1,4 @@
-const ResponseBase = require('./index');
+import ResponseBase from './Base';
 
 class External extends ResponseBase {
   public merchant_uid: string;
@@ -36,5 +36,4 @@ class External extends ResponseBase {
   }
 }
 
-export {};
-module.exports = External;
+export default External;

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class DeliveryMethod extends EnumBase {
   public RETURN_DESIGNATED: string = 'RETURN_DESIGNATED';
@@ -21,5 +21,4 @@ class DeliveryMethod extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
-module.exports = new DeliveryMethod();
+export default new DeliveryMethod();

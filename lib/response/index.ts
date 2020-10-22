@@ -1,35 +1,45 @@
-abstract class ResponseBase {
-  public abstract setAttributes(response: ResponseBase): void;
+import Item from './Item';
+import List from './List';
+import Collection from './Collection';
+import AuthResponse from './Auth';
+import PaymentResponse from './Payment';
+import PaymentAmountResponse from './PaymentAmount';
+import NaverProductOrderResponse from './NaverProductOrder';
+import NaverCashAmountResponse from './NaverCashAmount';
+import NaverReviewResponse from './NaverReview';
+import EscrowResponse from './Escrow';
+import PrepareResponse from './Prepare';
+import VbankHolderResponse from './VbankHolder';
+import CertificationResponse from './Certification';
+import CardCodeResponse from './CardCode';
+import BankCodeResponse from './BankCode';
+import ReceiptResponse from './Receipt';
+import ExternalResponse from './External';
+import KakaoOrderResponse from './KakaoOrder';
+import PaycoStatusResponse from './PaycoStatus';
+import ScheduledResultResponse from './ScheduledResult';
+import CustomerResponse from './Customer';
 
-  protected timeToDate(time: number): number | Date {
-    return time === 0 ? 0 : new Date(time*1000);
-  }
-
-  public getAttributes(): ResponseBase {
-    return this;
-  }
-}
-
-export {};
-module.exports = ResponseBase;
-module.exports.Item = require('./Item');
-module.exports.List = require('./List');
-module.exports.Collection = require('./Collection');
-module.exports.AuthResponse = require('./Auth');
-module.exports.PaymentResponse = require('./Payment');
-module.exports.PaymentAmountResponse = require('./PaymentAmount');
-module.exports.NaverProductOrderResponse = require('./NaverProductOrder');
-module.exports.NaverCashAmountResponse = require('./NaverCashAmount');
-module.exports.NaverReviewResponse = require('./NaverReview');
-module.exports.EscrowResponse = require('./Escrow');
-module.exports.PrepareResponse = require('./Prepare');
-module.exports.VbankHolderResponse = require('./VbankHolder');
-module.exports.CertificationResponse = require('./Certification');
-module.exports.CardCodeResponse = require('./CardCode');
-module.exports.BankCodeResponse = require('./BankCode');
-module.exports.ReceiptResponse = require('./Receipt');
-module.exports.ExternalResponse = require('./External');
-module.exports.KakaoOrderResponse = require('./KakaoOrder');
-module.exports.PaycoStatusResponse = require('./PaycoStatus');
-module.exports.ScheduledResultResponse = require('./ScheduledResult');
-module.exports.CustomerResponse = require('./Customer');
+export {
+  Item,
+  List,
+  Collection,
+  AuthResponse,
+  PaymentResponse,
+  PaymentAmountResponse,
+  NaverProductOrderResponse,
+  NaverCashAmountResponse,
+  NaverReviewResponse,
+  EscrowResponse,
+  PrepareResponse,
+  VbankHolderResponse,
+  CertificationResponse,
+  CardCodeResponse,
+  BankCodeResponse,
+  ReceiptResponse,
+  ExternalResponse,
+  KakaoOrderResponse,
+  PaycoStatusResponse,
+  ScheduledResultResponse,
+  CustomerResponse,
+};

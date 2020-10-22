@@ -29,5 +29,4 @@ class Payco extends RequestBase {
   }
 }
 
-export {};
 export default Payco;

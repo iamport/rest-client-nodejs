@@ -14,5 +14,4 @@ class Item {
   }
 }
 
-export {};
 export default Item;

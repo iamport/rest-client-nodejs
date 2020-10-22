@@ -44,5 +44,4 @@ class Customer extends ResponseBase {
   }
 }
 
-export {};
 export default Customer;

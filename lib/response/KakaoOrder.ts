@@ -72,5 +72,4 @@ class KakaoOrder extends ResponseBase {
   }
 }
 
-export {};
 export default KakaoOrder;

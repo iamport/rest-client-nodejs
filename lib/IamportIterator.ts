@@ -28,6 +28,5 @@ class IamportIterator implements Iterator {
     return this.request.request(iamport);
   }
 }
-
 export default IamportIterator;
 module.exports = IamportIterator;

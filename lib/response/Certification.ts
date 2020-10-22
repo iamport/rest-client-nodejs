@@ -47,5 +47,4 @@ class Certification extends ResponseBase {
   }
 }
 
-export {};
 export default Certification;

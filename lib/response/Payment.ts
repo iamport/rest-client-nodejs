@@ -148,6 +148,4 @@ class Payment extends ResponseBase {
     this.cash_receipt_issued = cash_receipt_issued;
   }
 }
-
-export {};
 export default Payment;

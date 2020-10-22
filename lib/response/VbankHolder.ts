@@ -11,5 +11,4 @@ class VbankHolder extends ResponseBase {
   }
 }
 
-export {};
 export default VbankHolder;

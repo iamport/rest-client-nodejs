@@ -104,5 +104,4 @@ class Customers extends RequestBase {
   }
 }
 
-export {};
 export default Customers;

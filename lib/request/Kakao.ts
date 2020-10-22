@@ -25,5 +25,4 @@ class Kakao extends RequestBase {
   }
 }
 
-export {};
 export default Kakao;

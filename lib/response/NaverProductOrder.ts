@@ -72,5 +72,4 @@ class NaverProductOrder extends ResponseBase {
   }
 }
 
-export {};
 export default NaverProductOrder;

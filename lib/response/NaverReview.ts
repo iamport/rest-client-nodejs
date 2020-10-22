@@ -42,5 +42,4 @@ class NaverReview extends ResponseBase {
   }
 }
 
-export {};
 export default NaverReview;

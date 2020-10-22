@@ -12,5 +12,4 @@ class PaycoStatus extends ResponseBase {
   }
 }
 
-export {};
 export default PaycoStatus;

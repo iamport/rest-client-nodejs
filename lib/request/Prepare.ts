@@ -34,5 +34,4 @@ class Prepare extends RequestBase {
   }
 }
 
-export {};
 export default Prepare;

@@ -27,7 +27,6 @@ abstract class EnumBase {
     return <const> [...keys];
   }
 }
-
 export default EnumBase;
 export {
   Sorting,

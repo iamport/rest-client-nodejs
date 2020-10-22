@@ -36,5 +36,4 @@ class Receipt extends ResponseBase {
   }
 }
 
-export {};
 export default Receipt;

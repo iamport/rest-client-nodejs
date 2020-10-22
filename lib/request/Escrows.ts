@@ -52,5 +52,4 @@ class Escrows extends RequestBase {
   }
 }
 
-export {};
 export default Escrows;

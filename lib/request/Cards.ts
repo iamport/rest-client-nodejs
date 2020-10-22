@@ -31,5 +31,4 @@ class Cards extends RequestBase {
   }
 }
 
-export {};
 export default Cards;

@@ -14,5 +14,4 @@ class CardCode extends ResponseBase {
   }
 }
 
-export {};
 export default CardCode;

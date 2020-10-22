@@ -12,5 +12,4 @@ class Prepare extends ResponseBase {
   }
 }
 
-export {};
 export default Prepare;

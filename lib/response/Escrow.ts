@@ -21,5 +21,4 @@ class Escrow extends ResponseBase {
   }
 }
 
-export {};
 export default Escrow;

@@ -47,5 +47,4 @@ class ScheduledResult extends ResponseBase {
   }
 }
 
-export {};
 export default ScheduledResult;

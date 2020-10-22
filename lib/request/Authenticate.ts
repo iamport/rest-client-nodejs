@@ -25,5 +25,4 @@ class Authenticate extends RequestBase {
   }
 }
 
-export {};
 export default Authenticate;

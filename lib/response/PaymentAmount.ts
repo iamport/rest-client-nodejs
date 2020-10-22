@@ -47,5 +47,4 @@ class PaymentAmount extends ResponseBase {
   }
 }
 
-export {};
 export default PaymentAmount;

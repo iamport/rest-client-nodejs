@@ -30,5 +30,4 @@ class Sorting extends EnumBase {
     throw new Error('key값을 입력해주세요.');
   }
 }
-
 export default new Sorting();

@@ -24,5 +24,4 @@ class Collection {
   }
 }
 
-export {};
 export default Collection;

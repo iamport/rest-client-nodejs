@@ -36,5 +36,4 @@ class External extends ResponseBase {
   }
 }
 
-export {};
 export default External;

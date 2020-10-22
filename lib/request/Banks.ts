@@ -30,6 +30,4 @@ class Banks extends RequestBase {
     return banks;
   }
 }
-
-export {};
 export default Banks;

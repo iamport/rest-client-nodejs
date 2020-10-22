@@ -1,7 +1,7 @@
 import RequestBase from './index';
 import { CertificationResponse } from '../response';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 /* 휴대폰 본인인증 */
 class Certifications extends RequestBase {
@@ -27,5 +27,4 @@ class Certifications extends RequestBase {
   }
 }
 
-export {};
 export default Certifications;

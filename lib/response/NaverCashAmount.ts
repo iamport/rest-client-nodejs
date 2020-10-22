@@ -24,5 +24,4 @@ class NaverCashAmount extends ResponseBase {
   }
 }
 
-export {};
 export default NaverCashAmount;

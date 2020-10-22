@@ -17,5 +17,4 @@ class List {
   }
 }
 
-export {};
 export default List;

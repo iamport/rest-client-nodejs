@@ -18,5 +18,4 @@ class Auth extends ResponseBase {
   }
 }
 
-export {};
 export default Auth;

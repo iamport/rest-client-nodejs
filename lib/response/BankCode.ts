@@ -14,5 +14,4 @@ class BankCode extends ResponseBase {
   }
 }
 
-export {};
 export default BankCode;

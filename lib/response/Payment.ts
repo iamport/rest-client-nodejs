@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 interface PaymentCancelAnnotation {
   pg_tid: string,

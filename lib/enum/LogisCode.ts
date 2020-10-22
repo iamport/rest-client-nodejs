@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class LogisCode extends EnumBase {
   public LOGEN: string = 'LOGEN';

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class PaycoOrderStatus extends EnumBase {
   public DELIVERY_START: string = 'DELIVERY_START';

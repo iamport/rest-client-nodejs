@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-import Iamport from './Iamport';
-import RequestBase from './request';
+import { Iamport } from './Iamport';
+import RequestBase from './request/Base';
 
 interface Iterator {
   hasNext(): boolean;
@@ -29,4 +29,3 @@ class IamportIterator implements Iterator {
   }
 }
 export default IamportIterator;
-module.exports = IamportIterator;

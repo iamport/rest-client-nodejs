@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 import { CardCode } from '../enum';
 
 const cardCodeType = CardCode.getType();

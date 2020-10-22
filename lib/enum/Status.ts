@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class Status extends EnumBase {
   public ALL: string = 'all';

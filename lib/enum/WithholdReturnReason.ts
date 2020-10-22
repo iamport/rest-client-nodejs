@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class WithholdReturnReason extends EnumBase {
   public RETURN_DELIVERYFEE: string = 'RETURN_DELIVERYFEE';

@@ -1,4 +1,4 @@
-import RequestBase from './index';
+import RequestBase from './Base';
 import { CardCodeResponse } from '../response';
 import { CardCode } from '../enum';
 

@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 import { PaycoOrderStatus } from '../enum';
 
 const paycoOrderStatusType = PaycoOrderStatus.getType();

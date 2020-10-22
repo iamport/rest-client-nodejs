@@ -1,5 +1,4 @@
-const Iamport = require('../lib/Iamport');
-
+const { Iamport } = require('../lib/Iamport');
 const [, , target, apiKey, apiSecret] = process.argv;
 
 const iamport = new Iamport({

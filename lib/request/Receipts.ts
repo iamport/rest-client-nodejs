@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import RequestBase from './index';
+import RequestBase from './Base';
 import { ReceiptResponse } from '../response';
 import { IdentifierType, IdentifierFor } from '../enum';
 

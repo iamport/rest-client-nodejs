@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class ScheduledStatus extends EnumBase {
   public SCHEDULED: string = 'scheduled';

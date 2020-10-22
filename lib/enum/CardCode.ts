@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class CardCode extends EnumBase {
   public BC: string = '361';

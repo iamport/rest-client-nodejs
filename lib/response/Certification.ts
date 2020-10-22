@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class Certification extends ResponseBase {
   public imp_uid: string;

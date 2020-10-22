@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 import { BankCode as EmumBankCode } from '../enum';
 
 const codeType = EmumBankCode.getType();

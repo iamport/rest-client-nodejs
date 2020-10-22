@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class SettleVbankCode extends EnumBase {
   public IBK: string = '003';

@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 import { ScheduledStatus } from '../enum';
 
 const scheduledStatusType = ScheduledStatus.getType();

@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class Escrow extends ResponseBase {
   public company: string;

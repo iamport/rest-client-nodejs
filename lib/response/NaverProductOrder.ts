@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 interface NaverPayOrderer {
   name: string,

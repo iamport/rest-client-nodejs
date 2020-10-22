@@ -1,4 +1,4 @@
-import RequestBase from './index';
+import RequestBase from './Base';
 import { BankCodeResponse } from '../response';
 import { BankCode } from '../enum';
 

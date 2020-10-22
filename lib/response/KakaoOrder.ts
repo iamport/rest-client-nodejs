@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 import { KakaoOrderStatus } from '../enum';
 
 const kakaoOrderStatusType = KakaoOrderStatus.getType();

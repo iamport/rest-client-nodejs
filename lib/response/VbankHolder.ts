@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class VbankHolder extends ResponseBase {
   public bank_holder: string;

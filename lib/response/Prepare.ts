@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class Prepare extends ResponseBase {
   public merchant_uid: string;

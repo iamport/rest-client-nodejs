@@ -3,6 +3,8 @@ import _ from 'lodash';
 import qs from 'qs';
 
 import * as Request from './request';
+import * as Response from './response';
+
 import { BASE_URL } from './constants';
 import { Headers } from './Interfaces';
 
@@ -20,7 +22,7 @@ interface Token {
   expired: number,
 };
 
-class Iamport {
+export class Iamport {
   private apiKey: string;
   private apiSecret: string;
   private token: Token;
@@ -72,7 +74,8 @@ class Iamport {
     return false;
   }
 }
-export default Iamport;
+
 export {
   Request,
+  Response
 }

@@ -20,18 +20,6 @@ import PaycoStatusResponse from './PaycoStatus';
 import ScheduledResultResponse from './ScheduledResult';
 import CustomerResponse from './Customer';
 
-abstract class ResponseBase {
-  public abstract setAttributes(response: ResponseBase): void;
-
-  protected timeToDate(time: any): number | Date {
-    return time === 0 ? 0 : new Date(time*1000);
-  }
-
-  public getAttributes(): ResponseBase {
-    return this;
-  }
-}
-
 export {
   Item,
   List,
@@ -55,4 +43,3 @@ export {
   ScheduledResultResponse,
   CustomerResponse,
 };
-export default ResponseBase;

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class Sorting extends EnumBase {
   public STARTED_ASC: string = 'started';

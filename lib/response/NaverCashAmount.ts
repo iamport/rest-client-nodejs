@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class NaverCashAmount extends ResponseBase {
   public amount_total: number;

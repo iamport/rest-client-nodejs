@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class CancelReason extends EnumBase {
   public PRODUCT_UNSATISFIED: string = 'PRODUCT_UNSATISFIED';

@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class Auth extends ResponseBase {
   public access_token: string;

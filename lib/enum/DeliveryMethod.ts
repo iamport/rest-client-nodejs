@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class DeliveryMethod extends EnumBase {
   public RETURN_DESIGNATED: string = 'RETURN_DESIGNATED';

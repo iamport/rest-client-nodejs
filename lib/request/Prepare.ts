@@ -1,4 +1,4 @@
-import RequestBase from './index';
+import RequestBase from './Base';
 import { PrepareResponse } from '../response';
 
 interface PostData {

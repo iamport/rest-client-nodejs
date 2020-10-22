@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class KakaoOrderStatus extends EnumBase {
   public READY: string = 'READY';

@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class External extends ResponseBase {
   public merchant_uid: string;

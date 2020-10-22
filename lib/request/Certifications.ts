@@ -1,4 +1,4 @@
-import RequestBase from './index';
+import RequestBase from './Base';
 import { CertificationResponse } from '../response';
 
 import { ImpUidParams } from '../Interfaces';

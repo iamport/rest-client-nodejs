@@ -1,4 +1,4 @@
-import ResponseBase from './index';
+import ResponseBase from './Base';
 
 class NaverReview extends ResponseBase {
   public review_id: string;

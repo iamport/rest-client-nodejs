@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class ReturnReason extends EnumBase {
   public INTENT_CHANGED: string = 'INTENT_CHANGED';

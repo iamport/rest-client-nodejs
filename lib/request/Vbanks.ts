@@ -1,4 +1,4 @@
-import RequestBase from './index';
+import RequestBase from './Base';
 import { PaymentResponse, VbankHolderResponse } from '../response';
 import { SettleVbankCode, BankCode } from '../enum';
 

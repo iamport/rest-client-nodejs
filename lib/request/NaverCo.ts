@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import RequestBase from './index';
+import RequestBase from './Base';
 import { NaverProductOrderResponse, NaverReviewResponse } from '../response';
 import {
   DeliveryMethod,

@@ -1,4 +1,4 @@
-import EnumBase from '.';
+import EnumBase from './Base';
 
 class IdentifierType extends EnumBase {
   public PERSON: string = 'person';

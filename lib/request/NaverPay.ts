@@ -2,7 +2,7 @@ import _ from 'lodash';
 import RequestBase from './index';
 import { NaverCashAmountResponse} from '../response';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 /* 네이버페이 > 결제형 */
 class NaverPay extends RequestBase {
@@ -35,5 +35,4 @@ class NaverPay extends RequestBase {
   }
 }
 
-export {};
 export default NaverPay;

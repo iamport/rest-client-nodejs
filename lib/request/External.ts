@@ -3,7 +3,7 @@ import RequestBase from './index';
 import { ExternalResponse } from '../response';
 import { IdentifierType, IdentifierFor } from '../enum';
 
-import { MerchantUidParams } from '../../';
+import { MerchantUidParams } from '../Interfaces';
 
 const identifierType = IdentifierType.getType();
 const identifierForType = IdentifierFor.getType();
@@ -55,5 +55,4 @@ class External extends RequestBase {
   }
 }
 
-export {};
 export default External;

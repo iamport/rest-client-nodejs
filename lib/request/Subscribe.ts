@@ -3,7 +3,7 @@ import RequestBase from './index';
 import { PaymentResponse, ScheduledResultResponse } from '../response';
 import { ScheduledStatus } from '../enum';
 
-import { MerchantUidParams } from '../../';
+import { MerchantUidParams } from '../Interfaces';
 
 const scheduledStatusType = ScheduledStatus.getType();
 interface ScheduleInfo {
@@ -146,5 +146,4 @@ class Subscribe extends RequestBase {
   }
 }
 
-export {};
 export default Subscribe;

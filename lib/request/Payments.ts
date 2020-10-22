@@ -3,7 +3,7 @@ import RequestBase from './index';
 import { PaymentResponse, PaymentAmountResponse } from '../response';
 import { Status, Sorting } from '../enum';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 const StatusType = Status.getType();
 const SortingType = Sorting.getType();
@@ -122,5 +122,4 @@ class Payments extends RequestBase {
   }
 }
 
-export {};
 export default Payments;

@@ -2,7 +2,7 @@ import RequestBase from './index';
 import { PaymentResponse, VbankHolderResponse } from '../response';
 import { SettleVbankCode, BankCode } from '../enum';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 const settleVbankCodeType = SettleVbankCode.getType();
 const BankCodeType = BankCode.getType();
@@ -78,5 +78,4 @@ class Vbanks extends RequestBase {
   }
 }
 
-export {};
 export default Vbanks;

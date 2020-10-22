@@ -4,8 +4,7 @@ import qs from 'qs';
 
 import * as Request from './request';
 import { BASE_URL } from './constants';
-
-import { Headers } from '../';
+import { Headers } from './Interfaces';
 
 interface IamportProperties {
   apiKey: string,
@@ -73,7 +72,6 @@ class Iamport {
     return false;
   }
 }
-
 export default Iamport;
 export {
   Request,

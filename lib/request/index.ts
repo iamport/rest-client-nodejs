@@ -19,7 +19,7 @@ import Customers from './Customers';
 import { List, Item, Collection } from '../response';
 
 import Iamport from '../Iamport';
-import { Method, Config, AxiosResponse } from '../..';
+import { Method, Config, AxiosResponse } from '../Interfaces';
 
 class RequestBase {
   public url: string;
@@ -110,7 +110,6 @@ class RequestBase {
     return [];
   }
 }
-
 export default RequestBase;
 export {
   Authenticate,

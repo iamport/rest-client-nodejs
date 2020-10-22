@@ -3,7 +3,7 @@ import RequestBase from './index';
 import { ReceiptResponse } from '../response';
 import { IdentifierType, IdentifierFor } from '../enum';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 const identifierType = IdentifierType.getType();
 const identifierForType = IdentifierFor.getType();
@@ -51,5 +51,4 @@ class Receipts extends RequestBase {
   }
 }
 
-export {};
 export default Receipts;

@@ -9,7 +9,7 @@ import {
   WithholdReturnReason,
 } from '../enum';
 
-import { ImpUidParams } from '../../';
+import { ImpUidParams } from '../Interfaces';
 
 const deliveryMethodType = DeliveryMethod.getType();
 const returnReasonType = ReturnReason.getType();
@@ -245,5 +245,4 @@ class NaverCo extends RequestBase {
   }
 }
 
-export {};
 export default NaverCo;

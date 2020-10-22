@@ -1,33 +1,31 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { PaymentResponse, PaymentAmountResponse } from '../response';
-import { Status, Sorting } from '../enum';
+import { StatusEnum, SortingEnum } from '../enum';
 
 import { ImpUidParams } from '../Interfaces';
 
-const StatusType = Status.getType();
-const SortingType = Sorting.getType();
 interface ImpUidsParams {
   imp_uid: string[],
 };
 interface MerchantUidsParams {
   merchant_uid: string,
-  status: typeof StatusType,
-  sorting: typeof Sorting,
+  status: StatusEnum,
+  sorting: SortingEnum,
   page: number,
 };
 interface StatusParams {
-  status: typeof StatusType,
+  status: StatusEnum,
   page: number,
   limit: number,
   from: number,
   to: number,
-  sorting: typeof SortingType,
+  sorting: SortingEnum,
 };
 interface MerchantUidParams {
   merchant_uid: string,
-  status: typeof StatusType,
-  sorting: typeof SortingType,
+  status: StatusEnum,
+  sorting: SortingEnum,
 };
 interface CancelData {
   imp_uid: string,

@@ -1,9 +1,7 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { EscrowResponse } from '../response';
-import { LogisCode } from '../enum';
-
-const logisCodeType = LogisCode.getType();
+import { LogisCodeEnum } from '../enum';
 
 interface SenderAndReceiver {
   name: string,
@@ -12,7 +10,7 @@ interface SenderAndReceiver {
   postcode: string,
 };
 interface Logis {
-  company: typeof logisCodeType,
+  company: LogisCodeEnum,
   invoice: string,
   sent_at: number,
 };

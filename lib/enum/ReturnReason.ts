@@ -1,18 +1,18 @@
-import EnumBase from './Base';
+export enum ReturnReasonEnum {
+  INTENT_CHANGED = 'INTENT_CHANGED',
+  COLOR_AND_SIZE = 'COLOR_AND_SIZE',
+  WRONG_ORDER = 'WRONG_ORDER',
+  PRODUCT_UNSATISFIED = 'PRODUCT_UNSATISFIED',
+  DELAYED_DELIVERY = 'DELAYED_DELIVERY',
+  SOLD_OUT = 'SOLD_OUT',
+  DROPPED_DELIVERY = 'DROPPED_DELIVERY',
+  BROKEN = 'BROKEN',
+  INCORRECT_INFO = 'INCORRECT_INFO',
+  WRONG_DELIVERY = 'WRONG_DELIVERY',
+  WRONG_OPTION = 'WRONG_OPTION',
+};
 
-class ReturnReason extends EnumBase {
-  public INTENT_CHANGED: string = 'INTENT_CHANGED';
-  public COLOR_AND_SIZE: string = 'COLOR_AND_SIZE';
-  public WRONG_ORDER: string = 'WRONG_ORDER';
-  public PRODUCT_UNSATISFIED: string = 'PRODUCT_UNSATISFIED';
-  public DELAYED_DELIVERY: string = 'DELAYED_DELIVERY';
-  public SOLD_OUT: string = 'SOLD_OUT';
-  public DROPPED_DELIVERY: string = 'DROPPED_DELIVERY';
-  public BROKEN: string = 'BROKEN';
-  public INCORRECT_INFO: string = 'INCORRECT_INFO';
-  public WRONG_DELIVERY: string = 'WRONG_DELIVERY';
-  public WRONG_OPTION: string = 'WRONG_OPTION';
-
+class ReturnReason {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

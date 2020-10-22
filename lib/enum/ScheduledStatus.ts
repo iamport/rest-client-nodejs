@@ -1,10 +1,10 @@
-import EnumBase from './Base';
+export enum ScheduledStatusEnum {
+  SCHEDULED = 'scheduled',
+  EXECUTED = 'executed',
+  REVOKED = 'revoked',
+}
 
-class ScheduledStatus extends EnumBase {
-  public SCHEDULED: string = 'scheduled';
-  public EXECUTED: string = 'executed';
-  public REVOKED: string = 'revoked';
-
+class ScheduledStatus {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

@@ -5,9 +5,8 @@ import {
   PaymentResponse,
   ScheduledResultResponse,
 } from '../response';
-import { ScheduledStatus } from '../enum';
+import { ScheduledStatusEnum } from '../enum';
 
-const scheduledStatusType = ScheduledStatus.getType();
 interface BillingKeysParams {
   customer_uid: string[],
 };
@@ -36,7 +35,7 @@ interface GetScheduledsParams {
   page?: number,
   from: number,
   to: number,
-  'schedule-status': typeof scheduledStatusType,
+  'schedule-status': ScheduledStatusEnum,
 };
 
 /* 정기결제용 구매자 빌링키 */

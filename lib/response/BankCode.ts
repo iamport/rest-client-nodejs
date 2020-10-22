@@ -1,10 +1,8 @@
 import ResponseBase from './Base';
-import { BankCode as EmumBankCode } from '../enum';
-
-const codeType = EmumBankCode.getType();
+import { BankCodeEnum } from '../enum';
 
 class BankCode extends ResponseBase {
-  public code: typeof codeType;
+  public code: BankCodeEnum;
   public name: string;
 
   public setAttributes(response: BankCode): void {

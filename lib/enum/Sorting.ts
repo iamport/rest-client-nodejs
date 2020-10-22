@@ -1,13 +1,13 @@
-import EnumBase from './Base';
+export enum SortingEnum {
+  STARTED_ASC = 'started',
+  STARTED_DESC = '-started',
+  PAID_ASC = 'paid',
+  PAID_DESC = '-paid',
+  UPDATED = 'updated',
+  UPDATED_DESC = '-updated',
+};
 
-class Sorting extends EnumBase {
-  public STARTED_ASC: string = 'started';
-  public STARTED_DESC: string = '-started';
-  public PAID_ASC: string = 'paid';
-  public PAID_DESC: string = '-paid';
-  public UPDATED: string = 'updated';
-  public UPDATED_DESC: string = '-updated';
-
+class Sorting {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

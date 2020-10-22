@@ -1,10 +1,10 @@
-import EnumBase from './Base';
+export enum PaycoOrderStatusEnum {
+  DELIVERY_START = 'DELIVERY_START',
+  PURCHASE_DECISION = 'PURCHASE_DECISION',
+  CANCELED = 'CANCELED',
+};
 
-class PaycoOrderStatus extends EnumBase {
-  public DELIVERY_START: string = 'DELIVERY_START';
-  public PURCHASE_DECISION: string = 'PURCHASE_DECISION';
-  public CANCELED: string = 'CANCELED';
-
+class PaycoOrderStatus {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

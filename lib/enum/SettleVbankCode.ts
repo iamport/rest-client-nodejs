@@ -1,20 +1,20 @@
-import EnumBase from './Base';
+export enum SettleVbankCodeEnum {
+  IBK = '003',
+  KB = '004',
+  KEB = '005',
+  NH = '011',
+  WOORI = '020',
+  SC = '023',
+  CITY = '027',
+  DAEGU = '031',
+  KYUNG_NAM = '039',
+  BUSAN = '032',
+  GWANG_JU = '034',
+  POST_OFFICE = '071',
+  SHINHAN = '088',
+};
 
-class SettleVbankCode extends EnumBase {
-  public IBK: string = '003';
-  public KB: string = '004';
-  public KEB: string = '005';
-  public NH: string = '011';
-  public WOORI: string = '020';
-  public SC: string = '023';
-  public CITY: string = '027';
-  public DAEGU: string = '031';
-  public KYUNG_NAM: string = '039';
-  public BUSAN: string = '032';
-  public GWANG_JU: string = '034';
-  public POST_OFFICE: string = '071';
-  public SHINHAN: string = '088';
-
+class SettleVbankCode {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

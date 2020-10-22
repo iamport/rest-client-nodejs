@@ -1,7 +1,6 @@
 import ResponseBase from './Base';
-import { ScheduledStatus } from '../enum';
+import { ScheduledStatusEnum } from '../enum';
 
-const scheduledStatusType = ScheduledStatus.getType();
 class ScheduledResult extends ResponseBase {
   public customer_uid?: string;
   public merchant_uid?: string;
@@ -14,7 +13,7 @@ class ScheduledResult extends ResponseBase {
   public buyer_addr?: string;
   public buyer_postcode?: string;
   public custom_data?: string;
-  public schedule_status?: typeof scheduledStatusType;
+  public schedule_status?: ScheduledStatusEnum;
 
   public setAttributes(response: ScheduledResult): void {
     const {

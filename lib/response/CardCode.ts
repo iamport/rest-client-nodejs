@@ -1,10 +1,8 @@
 import ResponseBase from './Base';
-import { CardCode as EnumCardCode } from '../enum';
-
-const codeType = EnumCardCode.getType();
+import { CardCodeEnum } from '../enum';
 
 class CardCode extends ResponseBase {
-  public code: typeof codeType;
+  public code: CardCodeEnum;
   public name: string;
 
   public setAttributes(response: CardCode): void {

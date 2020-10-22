@@ -1,9 +1,9 @@
-import EnumBase from './Base';
+export enum IdentifierForEnum {
+  PERSON = 'person',
+  COMPANY = 'company',
+};
 
-class IdentifierFor extends EnumBase {
-  public PERSON: string = 'person';
-  public COMPANY: string = 'company';
-
+class IdentifierFor {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

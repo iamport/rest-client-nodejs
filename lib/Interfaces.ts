@@ -13,8 +13,9 @@ export interface Config {
 }
 
 export interface AxiosResponse {
+  data: IamportData,
   response: {
-    data: IamportData,
+    data: any,
   },
 }
 

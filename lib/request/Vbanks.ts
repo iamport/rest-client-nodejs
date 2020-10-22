@@ -1,16 +1,13 @@
 import RequestBase from './Base';
 import { PaymentResponse, VbankHolderResponse } from '../response';
-import { SettleVbankCode, BankCode } from '../enum';
+import { SettleVbankCodeEnum, BankCodeEnum } from '../enum';
 
 import { ImpUidParams } from '../Interfaces';
-
-const settleVbankCodeType = SettleVbankCode.getType();
-const BankCodeType = BankCode.getType();
 
 interface PostData {
   merchant_uid: string,
   amount: number,
-  vbank_code: typeof settleVbankCodeType,
+  vbank_code: SettleVbankCodeEnum,
   vbank_due: number,
   vbank_holder: string,
   name?: string,
@@ -29,7 +26,7 @@ interface PutData {
   vbank_due?: number,
 };
 interface getHolderParams {
-  bank_code: typeof BankCodeType,
+  bank_code: BankCodeEnum,
   bank_num: string,
 };
 

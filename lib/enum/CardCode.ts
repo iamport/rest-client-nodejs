@@ -1,29 +1,29 @@
-import EnumBase from './Base';
+export enum CardCodeEnum {
+  BC = '361',
+  GWANG_JU = '364',
+  SAMSUNG = '365',
+  SHINHAN = '366',
+  HYUNDAI = '367',
+  LOTTE = '368',
+  SH = '369',
+  CITY = '370',
+  NH = '371',
+  JB = '372',
+  JEJU = '373',
+  HANA_SK = '374',
+  KB = '381',
+  WOORI = '041',
+  POST_OFFICE = '071',
+  VIS = 'VIS',
+  MAS = 'MAS',
+  DIN = 'DIN',
+  AMX = 'AMX',
+  JCB = 'JCB',
+  UNI = 'UNI',
+  DIS = 'DIS',
+};
 
-class CardCode extends EnumBase {
-  public BC: string = '361';
-  public GWANG_JU: string = '364';
-  public SAMSUNG: string = '365';
-  public SHINHAN: string = '366';
-  public HYUNDAI: string = '367';
-  public LOTTE: string = '368';
-  public SH: string = '369';
-  public CITY: string = '370';
-  public NH: string = '371';
-  public JB: string = '372';
-  public JEJU: string = '373';
-  public HANA_SK: string = '374';
-  public KB: string = '381';
-  public WOORI: string = '041';
-  public POST_OFFICE: string = '071';
-  public VIS: string = 'VIS';
-  public MAS: string = 'MAS';
-  public DIN: string = 'DIN';
-  public AMX: string = 'AMX';
-  public JCB: string = 'JCB';
-  public UNI: string = 'UNI';
-  public DIS: string = 'DIS';
-
+class CardCode {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

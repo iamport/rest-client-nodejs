@@ -2,25 +2,19 @@ import _ from 'lodash';
 import RequestBase from './Base';
 import { NaverProductOrderResponse, NaverReviewResponse } from '../response';
 import {
-  DeliveryMethod,
-  ReturnReason,
-  DeliveryCompany,
-  CancelReason,
-  WithholdReturnReason,
+  DeliveryMethodEnum,
+  ReturnReasonEnum,
+  DeliveryCompanyEnum,
+  CancelReasonEnum,
+  WithholdReturnReasonEnum,
 } from '../enum';
 
 import { ImpUidParams } from '../Interfaces';
 
-const deliveryMethodType = DeliveryMethod.getType();
-const returnReasonType = ReturnReason.getType();
-const deliveryCompanyType = DeliveryCompany.getType();
-const cancelReasonType = CancelReason.getType();
-const withholdReturnReasonType = WithholdReturnReason.getType();
-
 interface CancelParams {
   imp_uid: string,
   product_order_id?: string[],
-  reason?: typeof cancelReasonType,
+  reason?: CancelReasonEnum,
 };
 interface PlaceData {
   imp_uid: string,
@@ -29,23 +23,23 @@ interface PlaceData {
 interface ShipData {
   imp_uid: string,
   product_order_id?: string[],
-  delivery_method: typeof deliveryMethodType,
+  delivery_method: DeliveryMethodEnum,
   dispatched_at: number,
-  delivery_company?: typeof deliveryCompanyType,
+  delivery_company?: DeliveryCompanyEnum,
   tracking_number?: string,
 };
 interface RequestReturnData {
   imp_uid: string,
   product_order_id?: string[],
-  reason?: typeof returnReasonType,
-  delivery_method: typeof deliveryMethodType,
-  delivery_company?: typeof deliveryCompanyType,
+  reason?: ReturnReasonEnum,
+  delivery_method: DeliveryMethodEnum,
+  delivery_company?: DeliveryCompanyEnum,
   tracking_number?: string,
 };
 interface WithholdReturnData {
   imp_uid: string,
   product_order_id?: string[],
-  reason?: typeof withholdReturnReasonType,
+  reason?: WithholdReturnReasonEnum,
   memo: string,
   extra_charge: number,
 };

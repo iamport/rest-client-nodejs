@@ -1,11 +1,10 @@
 import ResponseBase from './Base';
-import { CardCode } from '../enum';
+import { CardCodeEnum } from '../enum';
 
-const cardCodeType = CardCode.getType();
 class Customer extends ResponseBase {
   public customer_uid: string;
   public card_name: string;
-  public card_code?: typeof cardCodeType;
+  public card_code?: CardCodeEnum;
   public card_number?: string;
   public customer_name?: string;
   public customer_tel?: string;

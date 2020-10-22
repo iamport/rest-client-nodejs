@@ -1,20 +1,20 @@
-import EnumBase from './Base';
+export enum KakaoOrderStatusEnum {
+  READY = 'READY',
+  SEND_TMS = 'SEND_TMS',
+  OPEN_PAYMENT = 'OPEN_PAYMENT',
+  SELECT_METHOD = 'SELECT_METHOD',
+  ARS_WAITING = 'ARS_WAITING',
+  AUTH_PASSWORD = 'AUTH_PASSWORD',
+  ISSUED_SID = 'ISSUED_SID',
+  SUCCESS_PAYMENT = 'SUCCESS_PAYMENT',
+  PART_CANCEL_PAYMENT = 'PART_CANCEL_PAYMENT',
+  CANCEL_PAYMENT = 'CANCEL_PAYMENT',
+  FAIL_AUTH_PASSWORD = 'FAIL_AUTH_PASSWORD',
+  QUIT_PAYMENT = 'QUIT_PAYMENT',
+  FAIL_PAYMENT = 'FAIL_PAYMENT',
+};
 
-class KakaoOrderStatus extends EnumBase {
-  public READY: string = 'READY';
-  public SEND_TMS: string = 'SEND_TMS';
-  public OPEN_PAYMENT: string = 'OPEN_PAYMENT';
-  public SELECT_METHOD: string = 'SELECT_METHOD';
-  public ARS_WAITING: string = 'ARS_WAITING';
-  public AUTH_PASSWORD: string = 'AUTH_PASSWORD';
-  public ISSUED_SID: string = 'ISSUED_SID';
-  public SUCCESS_PAYMENT: string = 'SUCCESS_PAYMENT';
-  public PART_CANCEL_PAYMENT: string = 'PART_CANCEL_PAYMENT';
-  public CANCEL_PAYMENT: string = 'CANCEL_PAYMENT';
-  public FAIL_AUTH_PASSWORD: string = 'FAIL_AUTH_PASSWORD';
-  public QUIT_PAYMENT: string = 'QUIT_PAYMENT';
-  public FAIL_PAYMENT: string = 'FAIL_PAYMENT';
-
+class KakaoOrderStatus {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

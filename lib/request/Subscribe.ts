@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { PaymentResponse, ScheduledResultResponse } from '../response';
-import { ScheduledStatus } from '../enum';
+import { ScheduledStatusEnum } from '../enum';
 
 import { MerchantUidParams } from '../Interfaces';
 
-const scheduledStatusType = ScheduledStatus.getType();
 interface ScheduleInfo {
   merchant_uid: string,
   schedule_at: number,
@@ -13,7 +12,7 @@ interface ScheduleInfo {
   tax_free?: number,
   name?: string,
   buyer_name?: string,
-  byer_email?: string,
+  buyer_email?: string,
   buyer_tel?: string,
   buyer_addr?: string,
   buyer_postcode?: string,
@@ -48,7 +47,7 @@ interface againData {
   tax_free?: number,
   name: string,
   buyer_name?: string,
-  byer_email?: string,
+  buyer_email?: string,
   buyer_tel?: string,
   buyer_addr?: string,
   buyer_postcode?: string,
@@ -76,7 +75,7 @@ interface getScheduledParams {
   page?: number,
   from: number,
   to: number,
-  'schedule-status': typeof scheduledStatusType,
+  'schedule-status': ScheduledStatusEnum,
 };
 
 /* 정기결제 */

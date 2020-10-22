@@ -1,17 +1,15 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { ReceiptResponse } from '../response';
-import { IdentifierType, IdentifierFor } from '../enum';
+import { IdentifierTypeEnum, IdentifierForEnum } from '../enum';
 
 import { ImpUidParams } from '../Interfaces';
 
-const identifierType = IdentifierType.getType();
-const identifierForType = IdentifierFor.getType();
 interface postData {
   imp_uid: string,
   identifier: string,
-  identifier_type?: typeof identifierType,
-  type?: typeof identifierForType,
+  identifier_type?: IdentifierTypeEnum,
+  type?: IdentifierForEnum,
   buyer_name?: string,
   buyer_email?: string,
   buyer_tel?: string,

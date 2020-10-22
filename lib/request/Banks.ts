@@ -1,10 +1,9 @@
 import RequestBase from './Base';
 import { BankCodeResponse } from '../response';
-import { BankCode } from '../enum';
+import { BankCodeEnum } from '../enum';
 
-const bankCodeType = BankCode.getType();
 interface getBankParams {
-  code: typeof bankCodeType,
+  code: BankCodeEnum,
 };
 
 /* 금융결제원 표준 코드 기준 은행 정보 조회 */

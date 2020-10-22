@@ -1,12 +1,11 @@
 import _ from 'lodash';
 import RequestBase from './Base';
 import { PaycoStatusResponse } from '../response';
-import { PaycoOrderStatus } from '../enum';
+import { PaycoOrderStatusEnum } from '../enum';
 
-const paycoOrderStatusType = PaycoOrderStatus.getType();
 interface postOrderStatusData {
   imp_uid: string,
-  status: typeof paycoOrderStatusType,
+  status: PaycoOrderStatusEnum,
 };
 
 /* 페이코 */

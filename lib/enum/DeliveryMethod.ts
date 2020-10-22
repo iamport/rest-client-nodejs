@@ -1,10 +1,10 @@
-import EnumBase from './Base';
+export enum DeliveryMethodEnum {
+  RETURN_DESIGNATED = 'RETURN_DESIGNATED',
+  RETURN_DELIVERY = 'RETURN_DELIVERY',
+  RETURN_INDIVIDUAL = 'RETURN_INDIVIDUAL',
+};
 
-class DeliveryMethod extends EnumBase {
-  public RETURN_DESIGNATED: string = 'RETURN_DESIGNATED';
-  public RETURN_DELIVERY: string = 'RETURN_DELIVERY';
-  public RETURN_INDIVIDUAL: string = 'RETURN_INDIVIDUAL';
-
+class DeliveryMethod {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

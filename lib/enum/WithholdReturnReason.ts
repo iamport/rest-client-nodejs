@@ -1,12 +1,12 @@
-import EnumBase from './Base';
+export enum WithholdReturnReasonEnum {
+  RETURN_DELIVERYFEE = 'RETURN_DELIVERYFEE',
+  EXTRAFEEE = 'EXTRAFEEE',
+  RETURN_DELIVERYFEE_AND_EXTRAFEEE = 'RETURN_DELIVERYFEE_AND_EXTRAFEEE',
+  RETURN_PRODUCT_NOT_DELIVERED = 'RETURN_PRODUCT_NOT_DELIVERED',
+  ETC = 'ETC',
+};
 
-class WithholdReturnReason extends EnumBase {
-  public RETURN_DELIVERYFEE: string = 'RETURN_DELIVERYFEE';
-  public EXTRAFEEE: string = 'EXTRAFEEE';
-  public RETURN_DELIVERYFEE_AND_EXTRAFEEE: string = 'RETURN_DELIVERYFEE_AND_EXTRAFEEE';
-  public RETURN_PRODUCT_NOT_DELIVERED: string = 'RETURN_PRODUCT_NOT_DELIVERED';
-  public ETC: string = 'ETC';
-
+class WithholdReturnReason {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

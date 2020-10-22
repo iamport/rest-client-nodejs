@@ -1,47 +1,47 @@
-import EnumBase from './Base';
+export enum DeliveryCompanyEnum {
+  CJGLS = 'CJGLS',
+  KGB = 'KGB',
+  DONGBU = 'DONGBU',
+  EPOST = 'EPOST',
+  REGISTPOST = 'REGISTPOST',
+  HANJIN = 'HANJIN',
+  HYUNDAI = 'HYUNDAI',
+  KGBLS = 'KGBLS',
+  INNOGIS = 'INNOGIS',
+  DAESIN = 'DAESIN',
+  ILYANG = 'ILYANG',
+  KDEXP = 'KDEXP',
+  CHUNIL = 'CHUNIL',
+  CH1 = 'CH1',
+  HDEXP = 'HDEXP',
+  CVSNET = 'CVSNET',
+  DHL = 'DHL',
+  FEDEX = 'FEDEX',
+  GSMNTON = 'GSMNTON',
+  WARPEX = 'WARPEX',
+  WIZWA = 'WIZWA',
+  EMS = 'EMS',
+  DHLDE = 'DHLDE',
+  ACIEXPRESS = 'ACIEXPRESS',
+  EZUSA = 'EZUSA',
+  PANTOS = 'PANTOS',
+  UPS = 'UPS',
+  HLCGLOBAL = 'HLCGLOBAL',
+  KOREXG = 'KOREXG',
+  TNT = 'TNT',
+  SWGEXP = 'SWGEXP',
+  DAEWOON = 'DAEWOON',
+  USPS = 'USPS',
+  IPARCEL = 'IPARCEL',
+  KUNYOUNG = 'KUNYOUNG',
+  HPL = 'HPL',
+  DADREAM = 'DADREAM',
+  SLX = 'SLX',
+  SFEXPRESS = 'SFEXPRESS',
+  HONAM = 'HONAM',
+}
 
-class DeliveryCompany extends EnumBase {
-  public CJGLS: string = 'CJGLS';
-  public KGB: string = 'KGB';
-  public DONGBU: string = 'DONGBU';
-  public EPOST: string = 'EPOST';
-  public REGISTPOST: string = 'REGISTPOST';
-  public HANJIN: string = 'HANJIN';
-  public HYUNDAI: string = 'HYUNDAI';
-  public KGBLS: string = 'KGBLS';
-  public INNOGIS: string = 'INNOGIS';
-  public DAESIN: string = 'DAESIN';
-  public ILYANG: string = 'ILYANG';
-  public KDEXP: string = 'KDEXP';
-  public CHUNIL: string = 'CHUNIL';
-  public CH1: string = 'CH1';
-  public HDEXP: string = 'HDEXP';
-  public CVSNET: string = 'CVSNET';
-  public DHL: string = 'DHL';
-  public FEDEX: string = 'FEDEX';
-  public GSMNTON: string = 'GSMNTON';
-  public WARPEX: string = 'WARPEX';
-  public WIZWA: string = 'WIZWA';
-  public EMS: string = 'EMS';
-  public DHLDE: string = 'DHLDE';
-  public ACIEXPRESS: string = 'ACIEXPRESS';
-  public EZUSA: string = 'EZUSA';
-  public PANTOS: string = 'PANTOS';
-  public UPS: string = 'UPS';
-  public HLCGLOBAL: string = 'HLCGLOBAL';
-  public KOREXG: string = 'KOREXG';
-  public TNT: string = 'TNT';
-  public SWGEXP: string = 'SWGEXP';
-  public DAEWOON: string = 'DAEWOON';
-  public USPS: string = 'USPS';
-  public IPARCEL: string = 'IPARCEL';
-  public KUNYOUNG: string = 'KUNYOUNG';
-  public HPL: string = 'HPL';
-  public DADREAM: string = 'DADREAM';
-  public SLX: string = 'SLX';
-  public SFEXPRESS: string = 'SFEXPRESS';
-  public HONAM: string = 'HONAM';
-
+class DeliveryCompany {
   public getValue(key: string): string {
     if (key) {
       switch (key) {

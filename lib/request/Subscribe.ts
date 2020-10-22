@@ -32,7 +32,7 @@ interface onetimeData {
   pg?: string,
   name: string,
   buyer_name?: string,
-  byer_email?: string,
+  buyer_email?: string,
   buyer_tel?: string,
   buyer_addr?: string,
   buyer_postcode?: string,

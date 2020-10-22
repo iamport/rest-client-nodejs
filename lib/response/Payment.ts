@@ -8,6 +8,8 @@ interface PaymentCancelAnnotation {
   receipt_url: string,
 };
 
+type CustomerUidUsage = 'issue' | 'payment' | 'payment.scheduled';
+
 class Payment extends ResponseBase {
   public imp_uid: string;
   public merchant_uid: string;
@@ -53,6 +55,8 @@ class Payment extends ResponseBase {
   public cancel_history?: PaymentCancelAnnotation[];
   public cancel_receipt_urls?: string[];
   public cash_receipt_issued?: boolean;
+  public customer_uid?: string;
+  public customer_uid_usage?: CustomerUidUsage;
 
   public setAttributes(response: Payment): void {
     const {
@@ -100,6 +104,8 @@ class Payment extends ResponseBase {
       cancel_history,
       cancel_receipt_urls,
       cash_receipt_issued,
+      customer_uid,
+      customer_uid_usage,
     } = response;
 
     this.imp_uid = imp_uid;
@@ -146,6 +152,8 @@ class Payment extends ResponseBase {
     this.cancel_history = cancel_history;
     this.cancel_receipt_urls = cancel_receipt_urls;
     this.cash_receipt_issued = cash_receipt_issued;
+    this.customer_uid = customer_uid;
+    this.customer_uid_usage = customer_uid_usage;
   }
 }
 export default Payment;

@@ -25,6 +25,11 @@
     "rest-client",
     "iamport-rest-client"
   ],
+  "homepage": "https://github.com/iamport/rest-client-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamport/rest-client-nodejs"
+  },
   "dependencies": {
     "@types/node": "^12.7.5",
     "axios": "^0.19.0",

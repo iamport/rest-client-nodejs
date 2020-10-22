@@ -5,10 +5,47 @@
 
 NodeJS용 아임포트 REST API Client 입니다.
 
+## 버전정보
+최신 버전은 [v0.9.3](https://github.com/iamport/rest-client-nodejs/tree/v0.9.3)입니다.
+
 ## 설치하기
+아래 명령어를 통해 `iamport-rest-client-nodejs`를 귀하의 nodeJS 프로젝트에 추가합니다.
+
 ```
-  $ npm install iamport-rest-client-nodejs
+$ npm install iamport-rest-client-nodejs
 ```
+
+## API 호출하기
+아래는 `iamport-rest-client-nodejs`를 활용해 은행 정보 조회 API를 호출하는 예제 코드입니다. 
+
+```javascript
+// 1. 아임포트 REST API 호출에 필요한 모듈을 불러옵니다.
+import { Iamport, Request, Enum } from 'iamport-rest-client-nodejs';
+const { Banks } = Request;
+const { BankCodeEnum } = Enum;
+
+// 2. 아임포트 객체를 생성합니다. 귀하의 API 정보는 아임포트 관리자페이지 > 시스템설정 > 내정보를 참고해주세요.
+const iamport = new Iamport({
+  apiKey: '귀하의_REST_API_KEY를_입력해주세요', 
+  apiSecret: '귀하의_REST_API_SECRET_KEY를_입력해주세요',
+});
+
+// EX1. 모든 은행 정보를 조회합니다.
+const getBanks = Banks.getBanks();
+getBanks.request(iamport)
+.then(response => console.log('response: ', response.data))
+.catch(error => console.log('error: ', error.response.data));
+
+// EX2. 특정 은행 정보를 조회합니다.
+const getBank = Banks.getBank({
+  code: BankCodeEnum.SC,
+});
+await getBank.request(iamport)
+.then(response => console.log('response: ', response.data))
+.catch(error => console.log('error: ', error.response.data));
+
+```
+
 
 ## 테스트하기
 프로젝트를 클론 받은 후 필요한 모듈을 설치합니다. yan example 명령어를 통해 테스트할 타깃, `REST API 키` 그리고 `REST API SECRET 키`를 입력합니다.

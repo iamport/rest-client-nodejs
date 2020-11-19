@@ -2,8 +2,8 @@
   "name": "iamport-rest-client-nodejs",
   "version": "0.9.0",
   "description": "NodeJS용 아임포트 REST API Client 입니다.",
-  "main": "dist/iamport.js",
-  "types": "dist/iamport.d.ts",
+  "main": "dist/Iamport.js",
+  "types": "dist/Iamport.d.ts",
   "scripts": {
     "start": "npm start",
     "lint": "tslint -p tsconfig.json",

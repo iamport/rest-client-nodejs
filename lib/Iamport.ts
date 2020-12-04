@@ -6,7 +6,7 @@ import * as Request from './request';
 import * as Response from './response';
 import * as Enum from './enum';
 
-import { BASE_URL, EXPIRE_BUFFER } from './constants';
+import { BASE_URL, EXPIRE_BUFFER, USER_AGENT } from './constants';
 import { Headers } from './Interfaces';
 
 interface IamportProperties {
@@ -56,7 +56,10 @@ export class Iamport {
     } 
 
     const { access_token } = this.token;
-    return { Authorization: `Bearer ${access_token}` };
+    return {
+      Authorization: `Bearer ${access_token}`,
+      'User-Agent': USER_AGENT,
+    };
   }
 
   private getToken(): Promise<any> {

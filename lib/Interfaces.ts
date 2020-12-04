@@ -2,6 +2,7 @@ export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
 export interface Headers {
   Authorization: string,
+  'User-Agent': string,
 }
 
 export interface Config {

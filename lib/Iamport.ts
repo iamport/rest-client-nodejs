@@ -69,9 +69,9 @@ export class Iamport {
 
   private isTokenValid(): boolean {
     if (this.token && this.token.access_token) {
-      const { now, expired_at } = this.token;
-      // 토큰의 유효시각 > 아임포트 서버의 시각 + 서버 시차 고려한 버퍼 값(30초) 
-      return expired_at > now + EXPIRE_BUFFER;
+      const { expired_at } = this.token;
+      // 토큰의 유효시각 > 가맹점 웹서버 시각 + 아임포트 서버와의 시차 고려한 버퍼 값(30초) 
+      return expired_at * 1000 > new Date().getTime() + EXPIRE_BUFFER;
     }
     return false;
   }

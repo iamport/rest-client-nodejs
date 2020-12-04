@@ -6,7 +6,7 @@
 NodeJS용 아임포트 REST API Client 입니다.
 
 ## 버전정보
-최신 버전은 [v0.9.4](https://github.com/iamport/rest-client-nodejs/tree/v0.9.4)입니다.
+최신 버전은 [v0.9.5](https://github.com/iamport/rest-client-nodejs/tree/v0.9.5)입니다.
 
 ## 설치하기
 아래 명령어를 통해 `iamport-rest-client-nodejs`를 귀하의 nodeJS 프로젝트에 추가합니다.

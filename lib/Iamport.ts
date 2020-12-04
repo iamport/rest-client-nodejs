@@ -6,7 +6,7 @@ import * as Request from './request';
 import * as Response from './response';
 import * as Enum from './enum';
 
-import { BASE_URL } from './constants';
+import { BASE_URL, EXPIRE_BUFFER } from './constants';
 import { Headers } from './Interfaces';
 
 interface IamportProperties {
@@ -20,7 +20,7 @@ interface RequestDataForGetToken {
 interface Token {
   access_token: string,
   now: number,
-  expired: number,
+  expired_at: number,
 };
 
 export class Iamport {
@@ -69,8 +69,9 @@ export class Iamport {
 
   private isTokenValid(): boolean {
     if (this.token && this.token.access_token) {
-      const { now } = this.token;
-      return new Date().getTime() > now * 1000;
+      const { now, expired_at } = this.token;
+      // 토큰의 유효시각 > 아임포트 서버의 시각 + 서버 시차 고려한 버퍼 값(30초) 
+      return expired_at > now + EXPIRE_BUFFER;
     }
     return false;
   }

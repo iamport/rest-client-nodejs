@@ -48,7 +48,7 @@ await getBank.request(iamport)
 
 
 ## 테스트하기
-프로젝트를 클론 받은 후 필요한 모듈을 설치합니다. yan example 명령어를 통해 테스트할 타깃, `REST API 키` 그리고 `REST API SECRET 키`를 입력합니다.
+프로젝트를 클론 받은 후 필요한 모듈을 설치합니다. yarnexample 명령어를 통해 테스트할 타깃, `REST API 키` 그리고 `REST API SECRET 키`를 입력합니다.
 
 ```
 $ git clone https://github.com/SoleeChoi/iamport-rest-client-nodejs.git

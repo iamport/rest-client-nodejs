@@ -2,11 +2,12 @@ import _ from 'lodash';
 import { List, Item, Collection } from '../response';
 
 import { Iamport } from '../Iamport';
-import { Method, Config, AxiosResponse } from '../Interfaces';
+import { Method, Config, AxiosResponse, Headers } from '../Interfaces';
 
 class RequestBase {
   public url: string;
   public method: Method = 'GET';
+  public headers: Headers = {};
   public params: any;
   public data: any;
   public responseType: string = 'item';
@@ -22,8 +23,14 @@ class RequestBase {
       params: this.params,
       data: this.data,
     };
+    if (Object.keys(this.headers).length > 0) {
+      config.headers = { ...this.headers };
+    }
     if (this.isTokenNeeded) {
-      config.headers = await iamport.getHeaders();
+      config.headers = {
+        ...config.headers,
+        ...await iamport.getHeaders(),
+      };
     }
 
     return iamport.getApiInstance().request(config)

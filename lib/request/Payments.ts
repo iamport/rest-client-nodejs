@@ -3,7 +3,7 @@ import RequestBase from './Base';
 import { PaymentResponse, PaymentAmountResponse } from '../response';
 import { StatusEnum, SortingEnum } from '../enum';
 
-import { ImpUidParams } from '../Interfaces';
+import { ImpUidParams, Headers } from '../Interfaces';
 
 interface ImpUidsParams {
   imp_uid: string[],
@@ -80,9 +80,13 @@ class Payments extends RequestBase {
   }
 
   /* 결제정보 조회 > 아임포트 번호 */
-  public static getByImpUid({ imp_uid }: ImpUidParams): Payments {
+  public static getByImpUid({ imp_uid }: ImpUidParams, headers?: Headers): Payments {
     const payments = new Payments();
     payments.url = `/payments/${imp_uid}`;
+    if (headers && typeof headers === 'object' && !Array.isArray(headers) && Object.keys(headers).length !== 0) {
+      // 티어 결제 건 조회 용도
+      payments.headers = { ...headers };
+    }
     return payments;
   }
 

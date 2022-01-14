@@ -55,6 +55,15 @@ module.exports = async (iamport) => {
   .then(response => console.log('response: ', response.data.code))
   .catch(error => console.log('error: ', error.response.data));
 
+  /* 결제정보 조회 > 아임포트 번호 & 티어 코드 */
+  const paymentByImpUidWithTierCode = Payments.getByImpUid({
+    imp_uid: 'imp_734819086221',
+  }, {
+    Tier: 'lt0'
+  });
+  await paymentByImpUidWithTierCode.request(iamport)
+  .then(response => console.log('response: ', response.data.code))
+  .catch(error => console.log('error: ', error.response.data));
 
   /* 결제정보 조회 > 주문번호 */
   const paymentByMerchantUid = Payments.getByMerchantUid({

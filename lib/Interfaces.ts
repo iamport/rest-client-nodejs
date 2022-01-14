@@ -1,8 +1,9 @@
 export type Method = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
 export interface Headers {
-  Authorization: string,
-  'User-Agent': string,
+  Authorization?: string,
+  'User-Agent'?: string,
+  Tier?: string,
 }
 
 export interface Config {

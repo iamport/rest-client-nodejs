@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm start",
     "lint": "tslint -p tsconfig.json",
-    "build": "npm run lint && tsc",
+    "build": "npm run lint && npm run prepublish",
     "test": "jest --config jestconfig.json",
     "example": "ts-node example/index.js",
     "prepublish": "rm -rf dist && tsc"

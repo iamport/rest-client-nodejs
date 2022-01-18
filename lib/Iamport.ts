@@ -12,6 +12,7 @@ import { Headers } from './Interfaces';
 interface IamportProperties {
   apiKey: string,
   apiSecret: string,
+  baseUrl?: string,
 };
 interface RequestDataForGetToken {
   imp_key: string,
@@ -24,18 +25,20 @@ interface Token {
 };
 
 export class Iamport {
+  private baseUrl: string;
   private apiKey: string;
   private apiSecret: string;
   private token: Token;
   private apiInstance: any;
 
   constructor(properties: IamportProperties) {
-    const { apiKey, apiSecret  } = properties;
+    const { apiKey, apiSecret, baseUrl } = properties;
+    this.baseUrl = baseUrl || BASE_URL;
     this.apiKey = apiKey;
     this.apiSecret = apiSecret;
 
     this.apiInstance = axios.create({
-      baseURL: BASE_URL,
+      baseURL: this.baseUrl,
       paramsSerializer: (params: any) =>
         qs.stringify(params, { arrayFormat: 'brackets' }),
     });
@@ -67,7 +70,7 @@ export class Iamport {
       imp_key: this.apiKey,
       imp_secret: this.apiSecret,
     };
-    return axios.post('https://api.iamport.kr/users/getToken', data);
+    return axios.post(`${this.baseUrl}/users/getToken`, data);
   }
 
   private isTokenValid(): boolean {

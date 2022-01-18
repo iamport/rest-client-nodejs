@@ -1,9 +1,10 @@
 const { Iamport } = require('../lib/Iamport');
-const [, , target, apiKey, apiSecret] = process.argv;
+const [, , target, apiKey, apiSecret, baseUrl] = process.argv;
 
 const iamport = new Iamport({
   apiKey: apiKey || 'imp_apikey', 
   apiSecret: apiSecret || 'ekKoeW8RyKuT0zgaZsUtXXTLQ4AhPFW3ZGseDA6bkA5lamv9OqDMnxyeB9wqOsuO9W3Mx9YSJ4dTqJ3f',
+  baseUrl: baseUrl || 'https://api.iamport.kr',
 });
 
 const TESTS = {

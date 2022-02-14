@@ -9,6 +9,7 @@ interface ScheduleInfo {
   merchant_uid: string,
   schedule_at: number,
   amount: number,
+  currency?: string,
   tax_free?: number,
   name?: string,
   buyer_name?: string,
@@ -18,15 +19,19 @@ interface ScheduleInfo {
   buyer_postcode?: string,
   custom_data?: string,
   notice_url?: string,
+  // TODO: 타입을 더 구체적으로 명시하기
+  extra?: { [key: string]: any } | any[],
 };
 interface onetimeData {
   merchant_uid: string,
+  currency?: string,
   amount: number,
   tax_free?: number,
   card_number: string,
   expiry: string,
   birth: string,
   pwd_2digit?: string,
+  cvc?: string,
   customer_uid?: string,
   pg?: string,
   name: string,
@@ -39,10 +44,13 @@ interface onetimeData {
   card_quota?: number,
   custom_data?: string,
   notice_url?: string,
+  secure_3d_charge_id?: string,
+  secure_3d_token?: string,
 };
 interface againData {
   customer_uid: string,
   merchant_uid: string,
+  currency?: string,
   amount: number,
   tax_free?: number,
   name: string,
@@ -52,6 +60,7 @@ interface againData {
   buyer_addr?: string,
   buyer_postcode?: string,
   interest_free_by_merchant?: boolean,
+  use_card_point?: boolean,
   card_quota?: number,
   custom_data?: string,
   notice_url?: string,
@@ -63,6 +72,7 @@ interface ScheduleData {
   expiry?: string,
   birth?: string,
   pwd_2digit?: string,
+  cvc?: string,
   pg?: string,
   schedules: ScheduleInfo[],
 };

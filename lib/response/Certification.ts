@@ -1,4 +1,4 @@
-import ResponseBase from './Base';
+import ResponseBase from "./Base";
 
 class Certification extends ResponseBase {
   public imp_uid: string;
@@ -14,6 +14,9 @@ class Certification extends ResponseBase {
   public unique_key?: string;
   public unique_in_site?: string;
   public origin?: string;
+  public birthday?: string;
+  public phone?: string;
+  public carrier?: string;
 
   public setAttributes(response: Certification): void {
     const {
@@ -30,6 +33,9 @@ class Certification extends ResponseBase {
       unique_key,
       unique_in_site,
       origin,
+      birthday,
+      phone,
+      carrier,
     } = response;
     this.imp_uid = imp_uid;
     this.merchant_uid = merchant_uid;
@@ -44,6 +50,9 @@ class Certification extends ResponseBase {
     this.unique_key = unique_key;
     this.unique_in_site = unique_in_site;
     this.origin = origin;
+    this.birthday = birthday;
+    this.phone = phone;
+    this.carrier = carrier;
   }
 }
 

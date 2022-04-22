@@ -8,6 +8,7 @@ class Certification extends ResponseBase {
   public name?: string;
   public gender?: string;
   public birth?: Date | number;
+  public birthday?: string;
   public foreigner?: boolean;
   public certified?: boolean;
   public certified_at?: Date | number;
@@ -24,6 +25,7 @@ class Certification extends ResponseBase {
       name,
       gender,
       birth,
+      birthday,
       foreigner,
       certified,
       certified_at,
@@ -38,6 +40,7 @@ class Certification extends ResponseBase {
     this.name = name;
     this.gender = gender;
     this.birth = this.timeToDate(birth);
+    this.birthday = birthday;
     this.foreigner = foreigner;
     this.certified = certified;
     this.certified_at = this.timeToDate(certified_at);

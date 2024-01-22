@@ -4,6 +4,7 @@ import { PaymentResponse, PaymentAmountResponse } from '../response';
 import { StatusEnum, SortingEnum } from '../enum';
 
 import { ImpUidParams, Headers } from '../Interfaces';
+import {RequireAtLeastOne} from "../typeUtil";
 
 interface ImpUidsParams {
   imp_uid: string[],
@@ -27,17 +28,48 @@ interface MerchantUidParams {
   status: StatusEnum,
   sorting: SortingEnum,
 };
-interface CancelData {
-  imp_uid: string,
-  merchant_uid: string,
-  amount: number,
-  tax_free: number,
-  checksum: number,
-  reason: string,
-  refund_holder: string,
-  refund_bank: string,
-  refund_account: string,
+
+interface CancelRequest {
+  /**
+   * 환불 unique key(imp_uid 또는 merchant_id)
+   * imp_uid의 값이 우선순위를 갖게되며 유효하지 않는 imp_uid값을 입력하면 merchant_uid값과 무관하게 환불요청이 실패합니다
+   */
+  imp_uid?: string,
+  /**
+   * 환불 unique key(imp_uid 또는 merchant_id)
+   * imp_uid의 값이 우선순위를 갖게되며 유효하지 않는 imp_uid값을 입력하면 merchant_uid값과 무관하게 환불요청이 실패합니다
+   */
+  merchant_uid?: string,
+  /**
+   * 환불 금액(amount)
+   * 요청한 환불금액을 입력합니다. 미입력시 전액이 환불됩니다.
+   */
+  amount?: number,
+  tax_free?: number,
+  /**
+   * 환불 가능 금액(checksum)
+   */
+  checksum?: number,
+  /**
+   * 환불 사유
+   */
+  reason?: string,
+  /**
+   * 가상계좌 환불 수령계좌 예금주
+   */
+  refund_holder?: string,
+  /**
+   * 가상계좌 환불 수령계좌 은행코드
+   */
+  refund_bank?: string,
+  /**
+   * 가상계좌 환불 수령계좌 번호
+   */
+  refund_account?: string,
 };
+
+type CancelData = RequireAtLeastOne<CancelRequest,'imp_uid'|'merchant_uid'>
+
 
 /* 일반결제 */
 class Payments extends RequestBase {
